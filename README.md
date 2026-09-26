@@ -23,9 +23,9 @@ python sims/gacha-1pct-100.py --stills   # 要所の静止画だけ
 
 ## 動画の一覧
 
-
-（準備中）
-
+| 公開日 | 問い | 動画 | コード |
+|---|---|---|---|
+| 2026-09-26 | 1%のガチャを100回。当たる人は何%？ | [見る](https://youtube.com/shorts/W4140l0DFmw) | [`gacha-1pct-100.py`](sims/gacha-1pct-100.py) |
 
 ## ライセンス
 

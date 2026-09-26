@@ -1,3 +1,10 @@
 {
-  "videos": []
+  "videos": [
+    {
+      "date": "2026-09-26",
+      "question": "1%のガチャを100回。当たる人は何%？",
+      "youtube_id": "W4140l0DFmw",
+      "slug": "gacha-1pct-100"
+    }
+  ]
 }
