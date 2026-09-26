@@ -13,6 +13,7 @@ import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from engine.brand import mode_banner
+from engine.parts import loop_back
 from engine.core import (W, H, FPS, Mixer, beat, bell, blip, check_answers, chord, clamp01,
                          ease, ease_out, fill, hexrgb, pad, pill, render, riser, rrect, shimmer,
                          still, text, thump, tick, _t)
@@ -44,19 +45,25 @@ PERSON_A = int(np.argmax((FIRST >= 28) & (FIRST <= 42)))   # 見本1: 途中で�
 PERSON_B = int(np.argmax(FIRST > 150))                     # 見本2: 100回ぜんぶ外れる人
 
 # ---------- 時間割 ----------
-A_IV, B_IV = 0.075, 0.03
+# 2026-09-26 テンポの直し（ユーザー指摘「最初の2回で企画を理解できるか」）:
+#   ・最初の3秒は問題を読む時間。1人目は最初の4回をゆっくり引き、ルールを1行出してから加速する
+#   ・結果の札と合図は「0.5秒＋文字数÷6秒」以上出す（engine/pace.py で測る）
 A_HIT = int(FIRST[PERSON_A])
+SLOW_N, SLOW_IV, FAST_IV = 6, 0.85, 0.08   # 2026-09-26 ユーザー「冒頭の1人目にもう少し時間が欲しい」
+A_TIMES = [j * SLOW_IV if j < SLOW_N else (SLOW_N - 1) * SLOW_IV + (j - SLOW_N + 1) * FAST_IV
+           for j in range(A_HIT)]          # j回目（0始まり）を引く時刻
+B_IV = 0.035
 T_A0 = 0.0
-T_A_HIT = T_A0 + A_HIT * A_IV
-T_B0 = T_A_HIT + 1.2
+T_A_HIT = A_TIMES[-1]
+T_B0 = T_A_HIT + 2.3
 T_B_END = T_B0 + 100 * B_IV
-T_BANNER = T_B_END + 1.4
-T_M0 = T_BANNER + 0.9                 # 1万人モード開始
+T_BANNER = T_B_END + 2.4
+T_M0 = T_BANNER + 1.6                 # 1万人モード開始
 T_R100 = T_M0 + 7.0                   # 100回目
-T_P2 = T_R100 + 3.4                   # 追い打ち「200回なら？」
-T_P2_RUN = T_P2 + 0.8
+T_P2 = T_R100 + 3.9                   # 追い打ち「200回なら？」
+T_P2_RUN = T_P2 + 1.5
 T_R200 = T_P2_RUN + 2.6
-DURATION = T_R200 + 3.2
+DURATION = T_R200 + 3.6
 
 
 def round_at(t):
@@ -106,9 +113,9 @@ def draw_choices(ctx, t):
         text(ctx, v, x + 165, y, 44, BG if dark else "#ffffff", alpha=a)
 
 
-def draw_board(ctx, t, first_hit, t0, iv, label, dim=1.0):
-    k = min(100, 1 + int((t - t0) / iv)) if t >= t0 else 0   # 0秒目から1回目が出ている
-    k = min(k, first_hit) if first_hit <= 100 else k
+def draw_board(ctx, k, first_hit, label, dim=1.0, pop=None, blink=None):
+    """k 回目まで引いた盤を描く。pop=(j, 0〜1) は j 番目のマスが出てくる途中、
+    blink=0〜1 は次に引くマスの点滅（止まった画面にしないため）"""
     text(ctx, label, 540, BY - 40, 34, SUB, bold=False, alpha=dim)
     for j in range(100):
         x = BX + (j % 10) * TS
@@ -120,7 +127,13 @@ def draw_board(ctx, t, first_hit, t0, iv, label, dim=1.0):
                 fill(ctx, (0.55, 0.2, 0.3, dim))
         else:
             fill(ctx, (*hexrgb(OFF)[:3], dim))
-        rrect(ctx, x + 4, y + 4, TS - 8, TS - 8, 10)
+        sc = 1.0
+        if pop is not None and j == pop[0]:
+            sc = 0.3 + 0.7 * ease_out(pop[1])
+        if blink is not None and j == k:
+            fill(ctx, (0.35, 0.42, 0.75, (0.35 + 0.65 * blink) * dim))
+        m = 4 + (TS - 8) * (1 - sc) / 2
+        rrect(ctx, x + m, y + m, TS - 2 * m, TS - 2 * m, 10)
         ctx.fill()
         if j < k and (j + 1) == first_hit:
             fill(ctx, (0.05, 0.07, 0.12, dim))
@@ -156,14 +169,21 @@ def draw(ctx, t):
     draw_choices(ctx, t)
 
     if t < T_B0:
-        k = draw_board(ctx, t, A_HIT, T_A0, A_IV, "1人目")
+        k = sum(1 for a in A_TIMES if a <= t)          # 0秒目から1回目が出ている
+        last = A_TIMES[k - 1] if k else 0.0
+        pop = (k - 1, clamp01((t - last) / 0.3)) if k else None
+        blink = 0.5 + 0.5 * math.sin(t * 9) if k < A_HIT else None
+        draw_board(ctx, k, A_HIT, "1人目", pop=pop, blink=blink)
         text(ctx, f"{k}回目", 540, 1250, 64)
+        text(ctx, "1マス＝1回引く　★＝当たり（1%）", 540, 1340, 36, "#ffffff")
         if t >= T_A_HIT:
             a = ease_out((t - T_A_HIT) / 0.25)
             pill(ctx, f"当たり！ {A_HIT}回目", 540, BY + 350, 60, HIT, fg=BG, a=a)
     elif t < T_BANNER:
-        k = draw_board(ctx, t, int(FIRST[PERSON_B]), T_B0, B_IV, "2人目")
+        k = min(100, 1 + int((t - T_B0) / B_IV))
+        draw_board(ctx, k, int(FIRST[PERSON_B]), "2人目")
         text(ctx, f"{k}回目", 540, 1250, 64)
+        text(ctx, "1マス＝1回引く　★＝当たり（1%）", 540, 1340, 36, SUB, bold=False)
         if t >= T_B_END:
             a = ease_out((t - T_B_END) / 0.25)
             pill(ctx, "100回ぜんぶハズレ", 540, BY + 350, 60, LOSE, a=a)
@@ -179,7 +199,7 @@ def draw(ctx, t):
         n_hit = int((FIRST <= r).sum())
         text(ctx, f"{r}回目", 330, 1345, 64)
         text(ctx, f"当たった人 {n_hit / N * 100:.0f}%", 700, 1345, 44, ACC)
-        text(ctx, "1マス＝1人（1万人）", 540, 1435, 30, SUB, bold=False)
+        text(ctx, "1マス＝1人　金＝当たった人", 540, 1435, 36, "#ffffff")
         if T_R100 <= t < T_P2 + 0.3:
             a = ease_out((t - T_R100 - 0.2) / 0.3) * (1 - ease((t - T_P2) / 0.3))
             pill(ctx, f"100回引いても\n{pct(1 - SIM100)}%は当たらない", 540, GY + 400, 66,
@@ -192,11 +212,12 @@ def draw(ctx, t):
             pill(ctx, f"200回でも\n{pct(1 - SIM200)}%は当たらない", 540, GY + 400, 66,
                  (0.08, 0.1, 0.2, 0.94), fg=LOSE, a=a)
 
-    if t > DURATION - 0.5:
-        a = ease((t - (DURATION - 0.5)) / 0.5)
-        ctx.set_source_rgba(0.055, 0.067, 0.125, a)
-        ctx.rectangle(0, 400, W, H - 400)
-        ctx.fill()
+    loop_back(ctx, t, DURATION, scene_first)
+
+
+def scene_first(ctx, t):
+    """ループの戻り先（冒頭のコマ）"""
+    draw(ctx, 0.0)
 
 
 # ---------- 音 ----------
@@ -210,8 +231,8 @@ def sad(dur=0.7):
 def build_audio():
     mx = Mixer(DURATION)
     mx.add(0, pad(DURATION), 1.0)
-    for j in range(A_HIT):
-        mx.add(T_A0 + j * A_IV, tick(900 + j * 12, 0.05), 0.5)
+    for j, a in enumerate(A_TIMES):
+        mx.add(a, tick(900 + j * 12, 0.05), 0.7 if j < SLOW_N else 0.5)
     mx.add(T_A_HIT, bell(1046.5), 0.7)
     mx.add(T_A_HIT, shimmer(60), 0.8)
     mx.add(T_A_HIT, thump(), 0.5)

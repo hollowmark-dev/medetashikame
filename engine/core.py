@@ -303,7 +303,7 @@ def render(draw, duration, out_path, mixer=None):
         for s in problems:
             print("  -", s)
         raise SystemExit(1)
-    print("公開前チェック: OK（0秒目の動き・文字の位置と大きさ・長さ・冒頭の音）")
+    print("公開前チェック: OK（0秒目の動き・文字の位置と大きさ・読み切れる長さ・長さ・冒頭の音）")
     shrink(out_path, duration)
     return out_path
 
@@ -328,6 +328,7 @@ def preflight(log, first, probe, duration, mixer):
             problems.append(f"{t:.1f}秒「{line}」が右のボタン列に隠れる（右端 x={x1:.0f}）")
         if size < MIN_TEXT:
             problems.append(f"{t:.1f}秒「{line}」の文字が小さい（{size}px < {MIN_TEXT}）")
+    problems += reading_gaps(log)
     if duration > 59:
         problems.append(f"長さ {duration:.1f}秒（ショートは60秒未満）")
     if mixer is not None:
@@ -335,6 +336,39 @@ def preflight(log, first, probe, duration, mixer):
         if np.sqrt(np.mean(head ** 2)) < 1e-4:
             problems.append("最初の0.5秒に音が無い")
     return problems
+
+
+READ_CPS = 6.0        # 1秒に読める文字数（スマホで初めて見る人の目安）
+READ_MIN_SIZE = 40    # この大きさ以上の文字（見出し・札・合図）を読み切れるかの対象にする
+
+
+def reading_gaps(log):
+    """大きな文字が「0.5秒＋文字数÷6秒」より早く消えていないか。
+    ナレーションが無いので、読み切れない札はそのまま「分からない」になる（2026-09-26 ユーザー指摘）。
+    数字だけが変わるカウンターは同じ表示として扱う"""
+    import re
+    frames = {}
+    for t, line, *_rest, size in log:
+        if size >= READ_MIN_SIZE:
+            frames.setdefault(round(t * FPS), set()).add(re.sub(r"[0-9,.]+", "#", line))
+    runs = {}
+    for f in sorted(frames):
+        for key in frames[f]:
+            iv = runs.setdefault(key, [])
+            if iv and f - iv[-1][1] <= 1:
+                iv[-1][1] = f
+            else:
+                iv.append([f, f])
+    out = []
+    for key, iv in runs.items():
+        body = key.replace("#", "").strip(" %%！？!?。、")
+        if len(body) < 2:
+            continue
+        have = max(b - a + 1 for a, b in iv) / FPS
+        need = 0.5 + len(key) / READ_CPS
+        if have < need:
+            out.append(f"{iv[0][0] / FPS:.1f}秒「{key}」が読み切れない（{have:.1f}秒 / 要る {need:.1f}秒）")
+    return out
 
 
 def still(draw, t, png_path):
