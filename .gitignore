@@ -9,3 +9,4 @@ publish/
 UPLOAD.md
 # 公開前の回はネタバレになるので載せない。公開した回だけ `git add -f sims/<slug>.py` で足す
 sims/*
+_src/
