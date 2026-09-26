@@ -1,0 +1,11 @@
+__pycache__/
+out/
+research/
+CHANNEL.md
+ledger.json
+brand/icon_circle_preview.png
+*.wav
+publish/
+UPLOAD.md
+# 公開前の回はネタバレになるので載せない。公開した回だけ `git add -f sims/<slug>.py` で足す
+sims/*
