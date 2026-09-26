@@ -54,7 +54,9 @@ def build():
             lines.append(f"| {v['date']} | {v['question']} | [見る](https://youtube.com/shorts/{v['youtube_id']}) "
                          f"| [`{v['slug']}.py`](sims/{v['slug']}.py) |")
     lines.append(TAIL)
-    (ROOT / "README.md").write_text("\n".join(lines), encoding="utf-8")
+    # 改行は LF にそろえる（Windows で書くと CRLF になり、クラウドのルーティンが書くたびに全体が差分になる）
+    with open(ROOT / "README.md", "w", encoding="utf-8", newline="\n") as f:
+        f.write("\n".join(lines))
 
 
 def code_url(slug):
