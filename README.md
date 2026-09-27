@@ -13,7 +13,8 @@ python sims/gacha-1pct-100.py      # out/gacha-1pct-100/ に mp4 ができる
 python sims/gacha-1pct-100.py --stills   # 要所の静止画だけ
 ```
 
-文字は Windows のメイリオで描いています。ほかの環境では `engine/core.py` の `FONT` を変えてください。
+2026-09-28 以降の回はノートの見た目（`engine/note.py`）で、字は手書き風の [Klee One](https://fonts.google.com/specimen/Klee+One)（SIL Open Font License、`fonts/` に同梱）を使います。
+Windows なら `fonts/KleeOne-SemiBold.ttf` をダブルクリックしてインストールしてください。それより前の回の字はメイリオです。
 
 ## 答えの確かめ方
 

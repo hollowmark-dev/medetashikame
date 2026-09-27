@@ -15,6 +15,9 @@ import numpy as np
 W, H, FPS = 1080, 1920, 30
 SR = 48000
 FONT = "Meiryo"
+SFX_GAIN = 1.0    # 効果音（BGM 以外）だけに掛ける音量。2026-09-27 ノート版は「BGMはそのまま、ピコーンがまだ大きい」で 0.5
+MIX_LEVEL = 0.11  # 書き出すときの平均音量（RMS）。2026-09-27 ノート版は「効果音が少し大きい」で 0.075 に（engine/note.py）
+STROKE = 0.0      # 太字の文字に足す縁取り（文字の大きさに対する比）。細い手書き体を太らせる（engine/note.py が設定）
 
 # ショートの画面で、UIに隠れる場所（下の約18%と右端のボタン列）。大事なものは置かない
 SAFE_BOTTOM = 1580
@@ -81,7 +84,14 @@ def text(ctx, s, x, y, size, color="#ffffff", align="center", bold=True, alpha=1
             tx = x
         cy = top + i * lh
         ctx.move_to(tx, cy + size * 0.36)
-        ctx.show_text(line)
+        if STROKE > 0 and bold:
+            ctx.text_path(line)
+            ctx.fill_preserve()
+            ctx.set_line_width(size * STROKE)
+            ctx.set_line_join(cairo.LINE_JOIN_ROUND)
+            ctx.stroke()
+        else:
+            ctx.show_text(line)
         if _LOG is not None and c[3] * alpha > 0.1:
             # translate / scale の中で描いた文字も、画面上の位置で判定できるように変換して記録する
             xs, ys = zip(*(ctx.user_to_device(px, py) for px, py in
@@ -109,20 +119,24 @@ def clamp01(t):
 
 class Mixer:
     def __init__(self, duration):
-        self.buf = np.zeros(int(SR * duration) + SR, dtype=np.float64)
+        self.buf = np.zeros(int(SR * duration) + SR, dtype=np.float64)      # 効果音
+        self.bgm_buf = np.zeros_like(self.buf)                               # BGM（pad・beat）
 
-    def add(self, t, samples, vol=1.0):
+    def add(self, t, samples, vol=1.0, bgm=False):
+        buf = self.bgm_buf if bgm else self.buf
         i = int(t * SR)
-        if i >= len(self.buf):
+        if i >= len(buf):
             return
-        n = min(len(samples), len(self.buf) - i)
-        self.buf[i:i + n] += samples[:n] * vol
+        n = min(len(samples), len(buf) - i)
+        buf[i:i + n] += samples[:n] * vol
 
     def write(self, path, duration):
-        x = self.buf[: int(SR * duration)]
-        # 平均の音量をそろえてから、はみ出た山だけ tanh で丸める（スマホで小さく聞こえないように）
-        rms = np.sqrt(np.mean(x ** 2)) or 1.0
-        x = np.tanh(x * (0.11 / rms)) * 0.9
+        n = int(SR * duration)
+        sfx, bgm = self.buf[:n], self.bgm_buf[:n]
+        # 平均の音量をそろえてから、はみ出た山だけ tanh で丸める（スマホで小さく聞こえないように）。
+        # そろえる倍率は効果音を下げる前の音で決める（効果音を下げても BGM の大きさは変わらない）
+        rms = np.sqrt(np.mean((sfx + bgm) ** 2)) or 1.0
+        x = np.tanh((bgm + sfx * SFX_GAIN) * (MIX_LEVEL / rms)) * 0.9
         pcm = (x * 32767).astype(np.int16)
         st = np.repeat(pcm[:, None], 2, axis=1)
         with wave.open(str(path), "wb") as w:
@@ -207,8 +221,8 @@ def beat(mixer, t0, t1, bpm=128, vol=0.5, accel=False):
     t, k = t0, 0
     while t < t1:
         if k % 2 == 0:
-            mixer.add(t, kick(), vol)
-        mixer.add(t, hat(seed=k), vol * (0.5 if k % 2 else 0.3))
+            mixer.add(t, kick(), vol, bgm=True)
+        mixer.add(t, hat(seed=k), vol * (0.5 if k % 2 else 0.3), bgm=True)
         p = (t - t0) / max(1e-6, t1 - t0)
         t += step / (2 if accel and p > 0.5 else 1)
         k += 1
@@ -332,7 +346,7 @@ def preflight(log, first, probe, duration, mixer):
     if duration > 59:
         problems.append(f"長さ {duration:.1f}秒（ショートは60秒未満）")
     if mixer is not None:
-        head = mixer.buf[: int(SR * 0.5)]
+        head = mixer.buf[: int(SR * 0.5)] + mixer.bgm_buf[: int(SR * 0.5)]
         if np.sqrt(np.mean(head ** 2)) < 1e-4:
             problems.append("最初の0.5秒に音が無い")
     return problems
