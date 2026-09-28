@@ -54,6 +54,8 @@ _PAPER = None
 DATE = None          # 日付欄に手書きで入れる文字（"9.28" など）。sim で公開日を入れる
 DESK = "#b98f62"     # 穴から見える机（木）の色
 MARGIN_X = 92        # 赤い余白線の位置
+PAGE_DX = 40         # 中央そろえの物をずらす量。画面の中心(540)ではなく、穴と余白線を除いた紙の中心(約580)にそろえる
+                     # （2026-09-28 ユーザー「左はリングの穴だから、そこを避けて中央ぞろいに」）。sim 側も本体を translate(PAGE_DX, 0) で描く
 
 
 def paper(ctx, step=45):
@@ -305,7 +307,7 @@ class Intro:
         from engine.brand import turtle
         if self.deco:
             self.deco(ctx, t, a)
-        ys = [470, 580, 690][:len(self.big)]
+        ys = [440, 545, 650][:len(self.big)]
         for k, (line, y, sz) in enumerate(zip(self.big, ys, self.big_sizes)):
             w = hand_text(ctx, line, self.LX, y, sz, INK, seed=11 + k, alpha=a)
         # 最後の行（聞きたいこと）にだけ赤い下線を、書くように引く
@@ -316,7 +318,7 @@ class Intro:
             show = ease_out((t - self.T_CHO[i]) / 0.2)
             if show <= 0:
                 continue
-            y = 880 + i * 105
+            y = 800 + i * 95
             x = self.LX + 38 + 14 * (1 - show)
             pen_circle(ctx, x, y, 34, 34, INK, seed=i + 7, width=4, alpha=a * show)
             text(ctx, "ABC"[i], x, y, 44, INK, alpha=a * show)
@@ -324,13 +326,13 @@ class Intro:
         # 予想して！ と 3・2・1（右側、赤ペンの丸の中）
         if t >= self.T_CD[0]:
             a1 = ease_out((t - self.T_CD[0]) / 0.2) * a
-            hand_text(ctx, "予想して！", 800, 870, 60, RED, seed=41, alpha=a1, align="center")
+            hand_text(ctx, "予想して！", 800, 790, 60, RED, seed=41, alpha=a1, align="center")
             n = sum(1 for c in self.T_CD if c <= t)
             age = t - self.T_CD[n - 1]
-            pen_circle(ctx, 800, 1005, 82, 78, RED, seed=50 + n, width=6, progress=clamp01(age / 0.3), alpha=a)
+            pen_circle(ctx, 800, 915, 82, 78, RED, seed=50 + n, width=6, progress=clamp01(age / 0.3), alpha=a)
             sc = 1 + 0.35 * (1 - ease_out(age / 0.15))
             ctx.save()
-            ctx.translate(800, 1005)
+            ctx.translate(800, 915)
             ctx.scale(sc, sc)
             text(ctx, str(len(self.T_CD) + 1 - n), 0, 0, 118, INK, alpha=a)
             ctx.restore()
@@ -340,21 +342,21 @@ class Intro:
             ctx.push_group()
             blink = 1.0 if 0.5 < (t - self.T_MSG) % 2.2 < 0.6 else 0.0
             ctx.save()
-            ctx.translate(835, 1470)
+            ctx.translate(850, 1380)
             ctx.rotate(0.07)
             fill(ctx, (1, 1, 1, 0.92))
             rrect(ctx, -140, -150, 300, 190, 22)
             ctx.fill()
             turtle(ctx, 0, 0, 0.5, blink=blink)
             ctx.restore()
-            tape(ctx, 960, 1335, 110, 34, 0.5)
+            tape(ctx, 975, 1245, 110, 34, 0.5)
             ctx.pop_group_to_source()
             ctx.paint_with_alpha(a2)
-            hand_text(ctx, self.msg + " →", self.LX + 10, 1440, 50, INK, seed=61, alpha=a2)
+            hand_text(ctx, self.msg + " →", self.LX + 10, 1320, 50, INK, seed=61, alpha=a2)
         # ルールのメモ（手で引いた枠の中に）
         if self.rule and t >= self.T_RULE:
             a3 = ease_out((t - self.T_RULE) / 0.3) * a
-            y0 = 1215
+            y0 = 1115
             w = 0
             for k, line in enumerate(self.rule):
                 w = max(w, hand_text(ctx, line, self.LX + 20, y0 + k * 68, 46, INK, seed=71 + k, alpha=a3))
@@ -389,7 +391,10 @@ class Intro:
         if m < 1:
             self._intro(ctx, t, 1 - clamp01(m * 2.2))
         if m > 0:
+            ctx.save()
+            ctx.translate(PAGE_DX, 0)
             self._top(ctx, t, m, reveal_t)
+            ctx.restore()
 
     def audio(self, mx):
         for c in self.T_CHO:
