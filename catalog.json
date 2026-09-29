@@ -17,6 +17,12 @@
       "question": "10人でじゃんけん。あいこが終わるまで平均何回？",
       "youtube_id": "m7eN1UpaNM0",
       "slug": "janken-10nin"
+    },
+    {
+      "date": "2026-09-29",
+      "question": "30人で席替え。誰も元の席に戻らない確率は？",
+      "youtube_id": "QqUfB-rXhus",
+      "slug": "sekigae-30nin"
     }
   ]
 }
