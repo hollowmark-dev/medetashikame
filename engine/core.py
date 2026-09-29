@@ -18,11 +18,19 @@ FONT = "Meiryo"
 SFX_GAIN = 1.0    # 効果音（BGM 以外）だけに掛ける音量。2026-09-27 ノート版は「BGMはそのまま、ピコーンがまだ大きい」で 0.5
 MIX_LEVEL = 0.11  # 書き出すときの平均音量（RMS）。2026-09-27 ノート版は「効果音が少し大きい」で 0.075 に（engine/note.py）
 STROKE = 0.0      # 太字の文字に足す縁取り（文字の大きさに対する比）。細い手書き体を太らせる（engine/note.py が設定）
+FONT_FILE = None  # 字をフォントのファイルから直接描く（Pillow）。名前で探さない（engine/note.py が設定）。
+                  # 2026-09-29: インストールした Klee One が、実行する場所によって cairo から見えたり見えなかったりして
+                  # 日本語が豆腐（□）になった。ファイルから描けば、どのPCでも同じ字になる
 
 # ショートの画面で、UIに隠れる場所（下の約18%と右端のボタン列）。大事なものは置かない
 SAFE_BOTTOM = 1450   # 2026-09-28 1580→1450。うろ覚え研究所と同じ決まり: 実機では下の約4分の1（1,480px より下）に
                      # チャンネル名・タイトル・ボタンが重なって文字が隠れる（ユーザー指摘）
 SAFE_RIGHT = 930
+# 2026-09-29 iPhone のアプリ（うろ覚え研究所の実機確認）: 上の約370px（時計・「ショート」・登録チャンネル等）が隠れ、
+# 縦長の画面に合わせて拡大されるので左右が約50pxずつ切れる。下は Android の 1,480px〜 のほうが厳しいので SAFE_BOTTOM のまま
+SAFE_TOP = 370
+SAFE_LEFT = 70
+SAFE_RIGHT_EDGE = 1010
 SAFE_RIGHT_FROM_Y = 1000   # 右端のボタン列（高評価・コメント等）はこの高さから下
 MIN_TEXT = 24              # これより小さい文字はスマホで読めない
 
@@ -65,6 +73,54 @@ def rrect(ctx, x, y, w, h, r):
     ctx.close_path()
 
 
+_PIL_FONTS = {}
+_LINE_CACHE = {}
+_MEASURE = cairo.Context(cairo.ImageSurface(cairo.FORMAT_ARGB32, 4, 4))
+
+
+def _pil_font(k):
+    from PIL import ImageFont
+    f = _PIL_FONTS.get(k)
+    if f is None:
+        f = _PIL_FONTS[k] = ImageFont.truetype(str(FONT_FILE), k)
+    return f
+
+
+def text_width(s, size, bold=True):
+    """1行の字の幅（進み幅）"""
+    if FONT_FILE:
+        k = max(1, int(round(size)))
+        return _pil_font(k).getlength(s) * size / k
+    _MEASURE.select_font_face(FONT, cairo.FONT_SLANT_NORMAL,
+                              cairo.FONT_WEIGHT_BOLD if bold else cairo.FONT_WEIGHT_NORMAL)
+    _MEASURE.set_font_size(size)
+    return _MEASURE.text_extents(s).x_advance
+
+
+def _line_image(line, k, rgb, sw):
+    """1行を Pillow で描いた画像（cairo の画像・ずらし量）。同じ字・大きさ・色は使い回す"""
+    key = (line, k, rgb, sw)
+    hit = _LINE_CACHE.get(key)
+    if hit is not None:
+        return hit
+    from PIL import Image, ImageDraw
+    f = _pil_font(k)
+    pad = sw + 4
+    w = int(f.getlength(line)) + 2 * pad + 4
+    h = int(k * 1.6) + 2 * pad
+    im = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+    ImageDraw.Draw(im).text((pad, pad + k * 1.15), line, font=f, fill=rgb + (255,), anchor="ls",
+                            stroke_width=sw, stroke_fill=rgb + (255,))
+    a = np.asarray(im, np.float32)
+    al = a[:, :, 3:4] / 255
+    buf = np.ascontiguousarray(np.concatenate([a[:, :, 2::-1] * al, a[:, :, 3:4]], 2).astype(np.uint8))
+    surf = cairo.ImageSurface.create_for_data(memoryview(buf), cairo.FORMAT_ARGB32, w, h, w * 4)
+    if len(_LINE_CACHE) > 8000:
+        _LINE_CACHE.clear()
+    _LINE_CACHE[key] = hit = (surf, buf, pad)
+    return hit
+
+
 def text(ctx, s, x, y, size, color="#ffffff", align="center", bold=True, alpha=1.0):
     """y はベースラインではなく文字の縦中央。改行を含めてよい"""
     ctx.select_font_face(FONT, cairo.FONT_SLANT_NORMAL,
@@ -76,27 +132,39 @@ def text(ctx, s, x, y, size, color="#ffffff", align="center", bold=True, alpha=1
     c = hexrgb(color) if isinstance(color, str) else color
     ctx.set_source_rgba(c[0], c[1], c[2], c[3] * alpha)
     for i, line in enumerate(lines):
-        ext = ctx.text_extents(line)
+        adv = text_width(line, size, bold)
         if align == "center":
-            tx = x - ext.x_advance / 2
+            tx = x - adv / 2
         elif align == "right":
-            tx = x - ext.x_advance
+            tx = x - adv
         else:
             tx = x
         cy = top + i * lh
-        ctx.move_to(tx, cy + size * 0.36)
-        if STROKE > 0 and bold:
+        if FONT_FILE:
+            k = max(1, int(round(size)))
+            sw = int(round(k * STROKE / 2)) if (STROKE > 0 and bold) else 0
+            rgb = tuple(int(v * 255 + 0.5) for v in c[:3])
+            surf, _buf, pad = _line_image(line, k, rgb, sw)
+            ctx.save()
+            ctx.translate(tx, cy + size * 0.36)
+            ctx.scale(size / k, size / k)
+            ctx.set_source_surface(surf, -pad, -(pad + k * 1.15))
+            ctx.paint_with_alpha(c[3] * alpha)
+            ctx.restore()
+        elif STROKE > 0 and bold:
+            ctx.move_to(tx, cy + size * 0.36)
             ctx.text_path(line)
             ctx.fill_preserve()
             ctx.set_line_width(size * STROKE)
             ctx.set_line_join(cairo.LINE_JOIN_ROUND)
             ctx.stroke()
         else:
+            ctx.move_to(tx, cy + size * 0.36)
             ctx.show_text(line)
         if _LOG is not None and c[3] * alpha > 0.1:
             # translate / scale の中で描いた文字も、画面上の位置で判定できるように変換して記録する
             xs, ys = zip(*(ctx.user_to_device(px, py) for px, py in
-                           ((tx, cy - size / 2), (tx + ext.x_advance, cy + size / 2))))
+                           ((tx, cy - size / 2), (tx + adv, cy + size / 2))))
             dsize = abs(ctx.user_to_device_distance(0, size)[1])
             _LOG.append((_CUR_T, line, min(xs), min(ys), max(xs), max(ys), dsize))
     ctx.new_path()   # show_text は現在位置を残すので、次の arc などに線がつながらないよう切る
@@ -337,6 +405,10 @@ def preflight(log, first, probe, duration, mixer):
         if key in seen:
             continue
         seen.add(key)
+        if y0 < SAFE_TOP:
+            problems.append(f"{t:.1f}秒「{line}」が iPhone で上に隠れる（上端 y={y0:.0f} < {SAFE_TOP}）")
+        if x0 < SAFE_LEFT or x1 > SAFE_RIGHT_EDGE:
+            problems.append(f"{t:.1f}秒「{line}」が iPhone で左右が切れる（x={x0:.0f}〜{x1:.0f}、{SAFE_LEFT}〜{SAFE_RIGHT_EDGE} に収める）")
         if y1 > SAFE_BOTTOM:
             problems.append(f"{t:.1f}秒「{line}」が下のUIに隠れる（下端 y={y1:.0f} > {SAFE_BOTTOM}）")
         elif x1 > SAFE_RIGHT and y1 > SAFE_RIGHT_FROM_Y:
@@ -395,10 +467,8 @@ def still(draw, t, png_path):
 
 def pill(ctx, s, x, y, size, bg, fg="#ffffff", a=1.0):
     """角丸の札に文字を載せる。s は改行を含めてよい。(x, y) は札の中心"""
-    ctx.select_font_face(FONT, cairo.FONT_SLANT_NORMAL, cairo.FONT_WEIGHT_BOLD)
-    ctx.set_font_size(size)
     lines = s.split("\n")
-    w = max(ctx.text_extents(l).x_advance for l in lines) + 70
+    w = max(text_width(l, size) for l in lines) + 70
     h = size * 1.25 * len(lines) + 40
     c = hexrgb(bg) if isinstance(bg, str) else bg
     fill(ctx, (c[0], c[1], c[2], c[3] * a))

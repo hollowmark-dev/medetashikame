@@ -32,6 +32,7 @@ import engine.core as core
 from engine.core import W, H, blip, bell, clamp01, ease, ease_out, fill, hexrgb, rrect, text, whoosh
 
 FONT = "Klee One"
+FONT_FILE = __import__("pathlib").Path(__file__).resolve().parents[1] / "fonts" / "KleeOne-SemiBold.ttf"
 PAPER = "#f6f2e7"
 GRID = "#cfdcea"
 INK = "#24324a"        # 本文（紺のインク）
@@ -44,6 +45,7 @@ STICKY = {"yellow": "#fff0a0", "pink": "#ffd0da", "mint": "#c9f0dc", "blue": "#d
 def use():
     """このあと描く文字を手書き風にする。Klee One はスマホでは細いので、太字の文字は縁取りで少し太らせる"""
     core.FONT = FONT
+    core.FONT_FILE = FONT_FILE     # 名前で探さず、同梱のファイルから描く（インストールが要らない）
     core.STROKE = 0.045
     core.MIX_LEVEL = 0.075   # 効果音が少し大きいと言われた（2026-09-27）
     core.SFX_GAIN = 0.5      # 続けて「BGMはそのままでいい、ピコーンがまだ大きい」（同日）。pad と beat は bgm=True で足す
@@ -63,6 +65,7 @@ def paper(ctx, step=45):
     2026-09-27 ユーザー「まだ広告っぽい。手作りっぽい要素を1コマに」→ 真っ平らな紙をやめて、机の上のノートに寄せた"""
     global _PAPER
     if _PAPER is None:
+        saved_log, core._LOG = core._LOG, None     # 日付欄は飾り。iPhone で隠れてよいので公開前チェックに入れない
         s = cairo.ImageSurface(cairo.FORMAT_ARGB32, W, H)
         c = cairo.Context(s)
         fill(c, PAPER)
@@ -114,6 +117,7 @@ def paper(ctx, step=45):
             c.stroke()
         if DATE:
             text(c, DATE, 930, 62, 34, INK, bold=False)
+        core._LOG = saved_log
         _PAPER = s
     ctx.set_source_surface(_PAPER, 0, 0)
     ctx.paint()
@@ -163,9 +167,7 @@ def hand_text(ctx, s, x, y, size, color=INK, seed=0, alpha=1.0, align="left", ji
     """1字ずつ、ほんの少し傾けて・上下にずらして書く（機械でそろえた行に見せない）。
     冒頭の大きな問題など、1コマ目の目立つ字に使う。公開前チェックのため字は core.text で描く"""
     rng = np.random.default_rng(seed)
-    ctx.select_font_face(core.FONT, cairo.FONT_SLANT_NORMAL, cairo.FONT_WEIGHT_BOLD)
-    ctx.set_font_size(size)
-    ws = [ctx.text_extents(ch).x_advance for ch in s]
+    ws = [core.text_width(ch, size) for ch in s]
     tot = sum(ws)
     cx = x - tot / 2 if align == "center" else (x - tot if align == "right" else x)
     for ch, w in zip(s, ws):
@@ -206,10 +208,8 @@ def sticky(ctx, s, x, y, size, color="yellow", fg=INK, a=1.0, tilt=-0.025):
     """付箋に文字を書く（札 pill の代わり）。(x, y) は中心。s は改行を含めてよい"""
     if a <= 0:
         return 0, 0
-    ctx.select_font_face(core.FONT, cairo.FONT_SLANT_NORMAL, cairo.FONT_WEIGHT_BOLD)
-    ctx.set_font_size(size)
     lines = s.split("\n")
-    w = max(ctx.text_extents(l).x_advance for l in lines) + 90
+    w = max(core.text_width(l, size) for l in lines) + 90
     h = size * 1.25 * len(lines) + 56
     bg = STICKY.get(color, color)
     ctx.save()
@@ -244,9 +244,7 @@ def banner(ctx, label, x, y, a=1.0, t_rel=0.0, size=80):
 
 def legend(ctx, items, y, size=34, gap=64):
     """色の見本と説明を中央にそろえて並べる。items = [(色 or [色,...], 説明)]。色が複数なら縞で"""
-    ctx.select_font_face(core.FONT, cairo.FONT_SLANT_NORMAL, cairo.FONT_WEIGHT_NORMAL)
-    ctx.set_font_size(size)
-    ws = [48 + ctx.text_extents(lab).x_advance for _, lab in items]
+    ws = [48 + core.text_width(lab, size, bold=False) for _, lab in items]
     x = 540 - (sum(ws) + gap * (len(items) - 1)) / 2
     for (col, lab), w in zip(items, ws):
         cols = col if isinstance(col, (list, tuple)) and isinstance(col[0], str) else [col]
@@ -275,7 +273,10 @@ class Intro:
     - 亀はマスキングテープで貼ったシール、その横に「1万人で引いて確かめる →」
     - 三択の下にルールのメモ（2026-09-27 ユーザー「理解する前に始まる」→ 待つ時間を読む時間にする）
 
-    title   … 定位置（y=150・235）の問題の2行
+    2026-09-29 iPhone 対応: 上の約370pxが隠れ、左右が約50pxずつ切れる。定位置の問題は y=420・500、三択は 615。
+    冒頭も全体を約200px下げた（右上の小物は y=400 より下に置くこと）。ルールのメモは使わない（ユーザー「ごちゃごちゃする」）
+
+    title   … 定位置（y=420・500）の問題の2行。幅が収まらなければ自動で小さくする
     big     … 冒頭の大きな問題（3行ほど）
     labels  … 三択の中身。A/B/C は自動で付く
     correct … 正解の番号（0始まり）。draw(reveal_t=) の時刻から赤ペンで囲む
@@ -307,7 +308,7 @@ class Intro:
         from engine.brand import turtle
         if self.deco:
             self.deco(ctx, t, a)
-        ys = [440, 545, 650][:len(self.big)]
+        ys = [640, 745, 850][:len(self.big)]
         for k, (line, y, sz) in enumerate(zip(self.big, ys, self.big_sizes)):
             w = hand_text(ctx, line, self.LX, y, sz, INK, seed=11 + k, alpha=a)
         # 最後の行（聞きたいこと）にだけ赤い下線を、書くように引く
@@ -318,21 +319,21 @@ class Intro:
             show = ease_out((t - self.T_CHO[i]) / 0.2)
             if show <= 0:
                 continue
-            y = 800 + i * 95
+            y = 990 + i * 90
             x = self.LX + 38 + 14 * (1 - show)
             pen_circle(ctx, x, y, 34, 34, INK, seed=i + 7, width=4, alpha=a * show)
             text(ctx, "ABC"[i], x, y, 44, INK, alpha=a * show)
-            hand_text(ctx, v, x + 62, y, 66, INK, seed=21 + i, alpha=a * show)
+            hand_text(ctx, v, x + 62, y, 62, INK, seed=21 + i, alpha=a * show)
         # 予想して！ と 3・2・1（右側、赤ペンの丸の中）
         if t >= self.T_CD[0]:
             a1 = ease_out((t - self.T_CD[0]) / 0.2) * a
-            hand_text(ctx, "予想して！", 800, 790, 60, RED, seed=41, alpha=a1, align="center")
+            hand_text(ctx, "予想して！", 780, 955, 60, RED, seed=41, alpha=a1, align="center")
             n = sum(1 for c in self.T_CD if c <= t)
             age = t - self.T_CD[n - 1]
-            pen_circle(ctx, 800, 915, 82, 78, RED, seed=50 + n, width=6, progress=clamp01(age / 0.3), alpha=a)
+            pen_circle(ctx, 790, 1085, 82, 78, RED, seed=50 + n, width=6, progress=clamp01(age / 0.3), alpha=a)
             sc = 1 + 0.35 * (1 - ease_out(age / 0.15))
             ctx.save()
-            ctx.translate(800, 915)
+            ctx.translate(790, 1085)
             ctx.scale(sc, sc)
             text(ctx, str(len(self.T_CD) + 1 - n), 0, 0, 118, INK, alpha=a)
             ctx.restore()
@@ -342,17 +343,17 @@ class Intro:
             ctx.push_group()
             blink = 1.0 if 0.5 < (t - self.T_MSG) % 2.2 < 0.6 else 0.0
             ctx.save()
-            ctx.translate(850, 1380)
+            ctx.translate(855, 1370)
             ctx.rotate(0.07)
             fill(ctx, (1, 1, 1, 0.92))
             rrect(ctx, -140, -150, 300, 190, 22)
             ctx.fill()
             turtle(ctx, 0, 0, 0.5, blink=blink)
             ctx.restore()
-            tape(ctx, 975, 1245, 110, 34, 0.5)
+            tape(ctx, 975, 1235, 110, 34, 0.5)
             ctx.pop_group_to_source()
             ctx.paint_with_alpha(a2)
-            hand_text(ctx, self.msg + " →", self.LX + 10, 1320, 50, INK, seed=61, alpha=a2)
+            hand_text(ctx, self.msg + " →", self.LX + 10, 1300, 48, INK, seed=61, alpha=a2)
         # ルールのメモ（手で引いた枠の中に）
         if self.rule and t >= self.T_RULE:
             a3 = ease_out((t - self.T_RULE) / 0.3) * a
@@ -369,21 +370,31 @@ class Intro:
 
     # 定位置（上に小さく）
     def _top(self, ctx, t, m, reveal_t):
-        text(ctx, self.title[0], 540, 150, self.title_sizes[0], INK, alpha=m)
-        text(ctx, self.title[1], 540, 235, self.title_sizes[1], INK, alpha=m)
-        pen_line(ctx, 130, 290, 950, 286, RED, seed=5, width=6, alpha=m)
+        for line, y, sz in ((self.title[0], 420, self.title_sizes[0]), (self.title[1], 500, self.title_sizes[1])):
+            w = core.text_width(line, sz)
+            if w > 850:                                  # iPhone で左右が切れないよう、幅 850px までに縮める
+                sz *= 850 / w
+            text(ctx, line, 540, y, sz, INK, alpha=m)
+        pen_line(ctx, 130, 552, 950, 548, RED, seed=5, width=6, alpha=m)
         rev = clamp01((t - reveal_t) / 0.5) if reveal_t is not None else 0.0
         for i, v in enumerate(self.labels):
-            cx, y = 540 + (i - 1) * 320, 370
+            cx, y = 540 + (i - 1) * 300, 620
             ok = i == self.correct
             a = m * (1 - 0.55 * rev * (not ok))
-            pen_circle(ctx, cx - 70, y, 30, 30, INK, seed=i + 7, width=4, alpha=a)
-            text(ctx, "ABC"[i], cx - 70, y, 40, INK, alpha=a)
-            text(ctx, v, cx + 28, y, 52, RED if (ok and rev > 0.5) else INK, alpha=a)
+            # 丸つきの記号＋中身を1かたまりにして列の中央へ（「約6400本」のような長い中身でも記号に重ならない）
+            vs = 52
+            vw = core.text_width(v, vs)
+            if 70 + vw > 240:                           # 3つが並んで窮屈にならない幅まで
+                vs *= (240 - 70) / vw
+                vw = core.text_width(v, vs)
+            x0 = cx - (70 + vw) / 2
+            pen_circle(ctx, x0 + 30, y, 30, 30, INK, seed=i + 7, width=4, alpha=a)
+            text(ctx, "ABC"[i], x0 + 30, y, 40, INK, alpha=a)
+            text(ctx, v, x0 + 70, y, vs, RED if (ok and rev > 0.5) else INK, align="left", alpha=a)
             if ok:
-                pen_circle(ctx, cx - 10, y, 140, 52, RED, seed=31, width=7, progress=rev)
+                pen_circle(ctx, cx, y, (70 + vw) / 2 + 34, 52, RED, seed=31, width=7, progress=rev)
             elif rev > 0:
-                pen_line(ctx, cx - 110, y + 4, cx + 95, y - 2, PENCIL, seed=i + 40, width=4,
+                pen_line(ctx, x0 - 10, y + 4, x0 + 80 + vw, y - 2, PENCIL, seed=i + 40, width=4,
                          progress=rev, alpha=0.8)
 
     def draw(self, ctx, t, reveal_t=None):
