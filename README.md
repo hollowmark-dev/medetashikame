@@ -26,6 +26,7 @@ Windows なら `fonts/KleeOne-SemiBold.ttf` をダブルクリックしてイン
 
 | 公開日 | 問い | 動画 | コード |
 |---|---|---|---|
+| 2026-10-01 | コイン10回。表がちょうど5回になる確率は？ | [見る](https://youtube.com/shorts/dOFlvkgn_54) | [`coin-10kai.py`](sims/coin-10kai.py) |
 | 2026-09-30 | 床の線に針を1万本落とす。線に重なるのは何本？ | [見る](https://youtube.com/shorts/RZDpqANNIcc) | [`hari-10000.py`](sims/hari-10000.py) |
 | 2026-09-29 | 30人で席替え。誰も元の席に戻らない確率は？ | [見る](https://youtube.com/shorts/QqUfB-rXhus) | [`sekigae-30nin.py`](sims/sekigae-30nin.py) |
 | 2026-09-28 | 10人でじゃんけん。あいこが終わるまで平均何回？ | [見る](https://youtube.com/shorts/m7eN1UpaNM0) | [`janken-10nin.py`](sims/janken-10nin.py) |
