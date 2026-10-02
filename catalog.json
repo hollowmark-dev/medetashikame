@@ -35,6 +35,12 @@
       "question": "コイン10回。表がちょうど5回になる確率は？",
       "youtube_id": "dOFlvkgn_54",
       "slug": "coin-10kai"
+    },
+    {
+      "date": "2026-10-02",
+      "question": "表なら1.5倍、裏なら0.6倍を100回。得する人は何%？",
+      "youtube_id": "dVRuGlVY6rI",
+      "slug": "bai-100kai"
     }
   ]
 }
