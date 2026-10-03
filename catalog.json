@@ -41,6 +41,12 @@
       "question": "表なら1.5倍、裏なら0.6倍を100回。得する人は何%？",
       "youtube_id": "dVRuGlVY6rI",
       "slug": "bai-100kai"
+    },
+    {
+      "date": "2026-10-03",
+      "question": "0.001度ずつずらした振り子1万本。10秒後どうなる？",
+      "youtube_id": "u72kZyE4qnw",
+      "slug": "furiko-10000"
     }
   ]
 }
