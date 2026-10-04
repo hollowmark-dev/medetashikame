@@ -26,6 +26,7 @@ Windows なら `fonts/KleeOne-SemiBold.ttf` をダブルクリックしてイン
 
 | 公開日 | 問い | 動画 | コード |
 |---|---|---|---|
+| 2026-10-04 | 1万人の町にゾンビ1体。1日1人かむ。全員ゾンビまで何日？ | [見る](https://youtube.com/shorts/kyIlnMHT57k) | [`zombie-10000.py`](sims/zombie-10000.py) |
 | 2026-10-03 | 0.001度ずつずらした振り子1万本。10秒後どうなる？ | [見る](https://youtube.com/shorts/u72kZyE4qnw) | [`furiko-10000.py`](sims/furiko-10000.py) |
 | 2026-10-02 | 表なら1.5倍、裏なら0.6倍を100回。得する人は何%？ | [見る](https://youtube.com/shorts/dVRuGlVY6rI) | [`bai-100kai.py`](sims/bai-100kai.py) |
 | 2026-10-01 | コイン10回。表がちょうど5回になる確率は？ | [見る](https://youtube.com/shorts/dOFlvkgn_54) | [`coin-10kai.py`](sims/coin-10kai.py) |
