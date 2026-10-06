@@ -59,6 +59,12 @@
       "question": "バスは平均10分おき（間隔はバラバラ）。バス停で平均何分待つ？",
       "youtube_id": "FmiVQIw8UJw",
       "slug": "bus-matsu"
+    },
+    {
+      "date": "2026-10-06",
+      "question": "まずい店に行列ができる確率は？（100人が順に店を選ぶ。自分の舌は6割当たる）",
+      "youtube_id": "dqIKEfCaVgY",
+      "slug": "gyoretsu-mise"
     }
   ]
 }

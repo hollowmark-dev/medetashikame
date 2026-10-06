@@ -26,6 +26,7 @@ Windows なら `fonts/KleeOne-SemiBold.ttf` をダブルクリックしてイン
 
 | 公開日 | 問い | 動画 | コード |
 |---|---|---|---|
+| 2026-10-06 | まずい店に行列ができる確率は？（100人が順に店を選ぶ。自分の舌は6割当たる） | [見る](https://youtube.com/shorts/dqIKEfCaVgY) | [`gyoretsu-mise.py`](sims/gyoretsu-mise.py) |
 | 2026-10-05 | バスは平均10分おき（間隔はバラバラ）。バス停で平均何分待つ？ | [見る](https://youtube.com/shorts/FmiVQIw8UJw) | [`bus-matsu.py`](sims/bus-matsu.py) |
 | 2026-10-04 | 1万人の町にゾンビ1体。1日1人かむ。全員ゾンビまで何日？ | [見る](https://youtube.com/shorts/kyIlnMHT57k) | [`zombie-10000.py`](sims/zombie-10000.py) |
 | 2026-10-03 | 0.001度ずつずらした振り子1万本。10秒後どうなる？ | [見る](https://youtube.com/shorts/u72kZyE4qnw) | [`furiko-10000.py`](sims/furiko-10000.py) |
