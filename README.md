@@ -26,6 +26,7 @@ Windows なら `fonts/KleeOne-SemiBold.ttf` をダブルクリックしてイン
 
 | 公開日 | 問い | 動画 | コード |
 |---|---|---|---|
+| 2026-10-07 | クラス35人。同じ誕生日の2人がいる確率は？ | [見る](https://youtube.com/shorts/gKtXC-N1510) | [`birthday-35nin.py`](sims/birthday-35nin.py) |
 | 2026-10-06 | まずい店に行列ができる確率は？（100人が順に店を選ぶ。自分の舌は6割当たる） | [見る](https://youtube.com/shorts/dqIKEfCaVgY) | [`gyoretsu-mise.py`](sims/gyoretsu-mise.py) |
 | 2026-10-05 | バスは平均10分おき（間隔はバラバラ）。バス停で平均何分待つ？ | [見る](https://youtube.com/shorts/FmiVQIw8UJw) | [`bus-matsu.py`](sims/bus-matsu.py) |
 | 2026-10-04 | 1万人の町にゾンビ1体。1日1人かむ。全員ゾンビまで何日？ | [見る](https://youtube.com/shorts/kyIlnMHT57k) | [`zombie-10000.py`](sims/zombie-10000.py) |

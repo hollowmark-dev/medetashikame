@@ -65,6 +65,12 @@
       "question": "まずい店に行列ができる確率は？（100人が順に店を選ぶ。自分の舌は6割当たる）",
       "youtube_id": "dqIKEfCaVgY",
       "slug": "gyoretsu-mise"
+    },
+    {
+      "date": "2026-10-07",
+      "question": "クラス35人。同じ誕生日の2人がいる確率は？",
+      "youtube_id": "gKtXC-N1510",
+      "slug": "birthday-35nin"
     }
   ]
 }
