@@ -26,6 +26,7 @@ Windows なら `fonts/KleeOne-SemiBold.ttf` をダブルクリックしてイン
 
 | 公開日 | 問い | 動画 | コード |
 |---|---|---|---|
+| 2026-10-09 | 雨の中、傘なしで100m。走ると濡れない？ | [見る](https://youtube.com/shorts/WXgmO-lKFDk) | [`ame-hashiru.py`](sims/ame-hashiru.py) |
 | 2026-10-08 | 高速の合流で1台がちょっとブレーキ。後ろで何台止まる？ | [見る](https://youtube.com/shorts/6lueki89zGg) | [`shizen-jutai.py`](sims/shizen-jutai.py) |
 | 2026-10-07 | クラス35人。同じ誕生日の2人がいる確率は？ | [見る](https://youtube.com/shorts/gKtXC-N1510) | [`birthday-35nin.py`](sims/birthday-35nin.py) |
 | 2026-10-06 | まずい店に行列ができる確率は？（100人が順に店を選ぶ。自分の舌は6割当たる） | [見る](https://youtube.com/shorts/dqIKEfCaVgY) | [`gyoretsu-mise.py`](sims/gyoretsu-mise.py) |
