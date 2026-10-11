@@ -83,6 +83,24 @@
       "question": "雨の中、傘なしで100m。走ると濡れない？",
       "youtube_id": "WXgmO-lKFDk",
       "slug": "ame-hashiru"
+    },
+    {
+      "date": "2026-10-10",
+      "question": "平均10分おきのバスで、なぜ10分も待つのか（待ち時間のパラドックス・団子運転・時間調整）",
+      "youtube_id": "5qwx23CGRuE",
+      "slug": "bus-matsu-long"
+    },
+    {
+      "date": "2026-10-10",
+      "question": "100人と50人が弓で撃ち合う（腕前は同じ）。勝った側は何人残る？",
+      "youtube_id": "Kr6BaklYUO0",
+      "slug": "kassen-2bai"
+    },
+    {
+      "date": "2026-10-11",
+      "question": "エスカレーター、片側あける？2列で立つ？ 100人の平均、早いのは？",
+      "youtube_id": "PSDqj-H7EZk",
+      "slug": "escalator-2retsu"
     }
   ]
 }

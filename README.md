@@ -26,6 +26,9 @@ Windows なら `fonts/KleeOne-SemiBold.ttf` をダブルクリックしてイン
 
 | 公開日 | 問い | 動画 | コード |
 |---|---|---|---|
+| 2026-10-11 | エスカレーター、片側あける？2列で立つ？ 100人の平均、早いのは？ | [見る](https://youtube.com/shorts/PSDqj-H7EZk) | [`escalator-2retsu.py`](sims/escalator-2retsu.py) |
+| 2026-10-10 | 平均10分おきのバスで、なぜ10分も待つのか（待ち時間のパラドックス・団子運転・時間調整） | [見る](https://youtube.com/shorts/5qwx23CGRuE) | [`bus-matsu-long.py`](sims/bus-matsu-long.py) |
+| 2026-10-10 | 100人と50人が弓で撃ち合う（腕前は同じ）。勝った側は何人残る？ | [見る](https://youtube.com/shorts/Kr6BaklYUO0) | [`kassen-2bai.py`](sims/kassen-2bai.py) |
 | 2026-10-09 | 雨の中、傘なしで100m。走ると濡れない？ | [見る](https://youtube.com/shorts/WXgmO-lKFDk) | [`ame-hashiru.py`](sims/ame-hashiru.py) |
 | 2026-10-08 | 高速の合流で1台がちょっとブレーキ。後ろで何台止まる？ | [見る](https://youtube.com/shorts/6lueki89zGg) | [`shizen-jutai.py`](sims/shizen-jutai.py) |
 | 2026-10-07 | クラス35人。同じ誕生日の2人がいる確率は？ | [見る](https://youtube.com/shorts/gKtXC-N1510) | [`birthday-35nin.py`](sims/birthday-35nin.py) |
