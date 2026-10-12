@@ -26,6 +26,7 @@ Windows なら `fonts/KleeOne-SemiBold.ttf` をダブルクリックしてイン
 
 | 公開日 | 問い | 動画 | コード |
 |---|---|---|---|
+| 2026-10-12 | 傘をさして雨の中を100m。歩くのと走るの、どちらが濡れない？ 傘を前に出して傾けたら・傘の大きさ・追い風/向かい風だと？ | [見る](https://www.youtube.com/watch?v=LeThiF7pdlo) | [`ame-long.py`](sims/ame-long.py) |
 | 2026-10-11 | エスカレーター、片側あける？2列で立つ？ 100人の平均、早いのは？ | [見る](https://youtube.com/shorts/PSDqj-H7EZk) | [`escalator-2retsu.py`](sims/escalator-2retsu.py) |
 | 2026-10-10 | 平均10分おきのバスで、なぜ10分も待つのか（待ち時間のパラドックス・団子運転・時間調整） | [見る](https://youtube.com/shorts/5qwx23CGRuE) | [`bus-matsu-long.py`](sims/bus-matsu-long.py) |
 | 2026-10-10 | 100人と50人が弓で撃ち合う（腕前は同じ）。勝った側は何人残る？ | [見る](https://youtube.com/shorts/Kr6BaklYUO0) | [`kassen-2bai.py`](sims/kassen-2bai.py) |
