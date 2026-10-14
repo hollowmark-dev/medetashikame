@@ -26,6 +26,7 @@ Windows なら `fonts/KleeOne-SemiBold.ttf` をダブルクリックしてイン
 
 | 公開日 | 問い | 動画 | コード |
 |---|---|---|---|
+| 2026-10-14 | 雪の結晶、同じ形はある？（1万個を、それぞれの空で育てて比べる） | [見る](https://youtube.com/shorts/Sbo3M0J3NpA) | [`yuki-kesshou.py`](sims/yuki-kesshou.py) |
 | 2026-10-13 | 砂時計、砂が減ると速く落ちているように感じる？（砂1万粒の砂時計と水時計） | [見る](https://youtube.com/shorts/AndQs7BFbVc) | [`sand-dokei.py`](sims/sand-dokei.py) |
 | 2026-10-12 | 傘をさして雨の中を100m。歩くのと走るの、どちらが濡れない？ 傘を前に出して傾けたら・傘の大きさ・追い風/向かい風だと？ | [見る](https://youtube.com/shorts/LeThiF7pdlo) | [`ame-long.py`](sims/ame-long.py) |
 | 2026-10-12 | バターの面が下になるのは、気のせい？（トーストをそっと落とす。1万枚） | [見る](https://youtube.com/shorts/deJjeL0e3Gs) | [`toast-butter.py`](sims/toast-butter.py) |
