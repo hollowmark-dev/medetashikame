@@ -26,6 +26,9 @@ Windows なら `fonts/KleeOne-SemiBold.ttf` をダブルクリックしてイン
 
 | 公開日 | 問い | 動画 | コード |
 |---|---|---|---|
+| 2026-10-17 | 1万人と5千人が弓で撃ち合う（腕前は同じ）。勝った側は何人残る？ 腕前・刀・狭い道・分けて戦うと？（ランチェスターの法則） | [見る](https://youtube.com/shorts/J8JWkF_Oqy0) | [`kassen-long.py`](sims/kassen-long.py) |
+| 2026-10-17 | コーヒーにミルク、先に入れると冷めにくい？（10分待って飲む） | [見る](https://youtube.com/shorts/JIykP3wSRb4) | [`coffee-milk.py`](sims/coffee-milk.py) |
+| 2026-10-16 | シャッフル再生で、同じ歌手が続く。これって偏ってる？（50曲・歌手10人×5曲・最初の20曲） | [見る](https://youtube.com/shorts/O8pJKZa-jXY) | [`shuffle-saisei.py`](sims/shuffle-saisei.py) |
 | 2026-10-15 | 車を飛ばしても、次の信号で追いつかれる？（制限60kmの道を40kmと60kmで・信号8つ） | [見る](https://youtube.com/shorts/QHQ_ZVBvweA) | [`shingou-tobasu.py`](sims/shingou-tobasu.py) |
 | 2026-10-14 | 雪の結晶、同じ形はある？（1万個を、それぞれの空で育てて比べる） | [見る](https://youtube.com/shorts/Sbo3M0J3NpA) | [`yuki-kesshou.py`](sims/yuki-kesshou.py) |
 | 2026-10-13 | 砂時計、砂が減ると速く落ちているように感じる？（砂1万粒の砂時計と水時計） | [見る](https://youtube.com/shorts/AndQs7BFbVc) | [`sand-dokei.py`](sims/sand-dokei.py) |

@@ -131,6 +131,24 @@
       "question": "車を飛ばしても、次の信号で追いつかれる？（制限60kmの道を40kmと60kmで・信号8つ）",
       "youtube_id": "QHQ_ZVBvweA",
       "slug": "shingou-tobasu"
+    },
+    {
+      "date": "2026-10-16",
+      "question": "シャッフル再生で、同じ歌手が続く。これって偏ってる？（50曲・歌手10人×5曲・最初の20曲）",
+      "youtube_id": "O8pJKZa-jXY",
+      "slug": "shuffle-saisei"
+    },
+    {
+      "date": "2026-10-17",
+      "question": "1万人と5千人が弓で撃ち合う（腕前は同じ）。勝った側は何人残る？ 腕前・刀・狭い道・分けて戦うと？（ランチェスターの法則）",
+      "youtube_id": "J8JWkF_Oqy0",
+      "slug": "kassen-long"
+    },
+    {
+      "date": "2026-10-17",
+      "question": "コーヒーにミルク、先に入れると冷めにくい？（10分待って飲む）",
+      "youtube_id": "JIykP3wSRb4",
+      "slug": "coffee-milk"
     }
   ]
 }
