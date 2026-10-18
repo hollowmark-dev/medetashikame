@@ -26,6 +26,7 @@ Windows なら `fonts/KleeOne-SemiBold.ttf` をダブルクリックしてイン
 
 | 公開日 | 問い | 動画 | コード |
 |---|---|---|---|
+| 2026-10-18 | 30分の外出、エアコン暖房はつけっぱなしと消す、どっちが安い？ | [見る](https://youtube.com/shorts/ihynyMrzOHY) | [`aircon-tsukeppanashi.py`](sims/aircon-tsukeppanashi.py) |
 | 2026-10-17 | 1万人と5千人が弓で撃ち合う（腕前は同じ）。勝った側は何人残る？ 腕前・刀・狭い道・分けて戦うと？（ランチェスターの法則） | [見る](https://youtube.com/shorts/J8JWkF_Oqy0) | [`kassen-long.py`](sims/kassen-long.py) |
 | 2026-10-17 | コーヒーにミルク、先に入れると冷めにくい？（10分待って飲む） | [見る](https://youtube.com/shorts/JIykP3wSRb4) | [`coffee-milk.py`](sims/coffee-milk.py) |
 | 2026-10-16 | シャッフル再生で、同じ歌手が続く。これって偏ってる？（50曲・歌手10人×5曲・最初の20曲） | [見る](https://youtube.com/shorts/O8pJKZa-jXY) | [`shuffle-saisei.py`](sims/shuffle-saisei.py) |
