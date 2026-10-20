@@ -26,6 +26,7 @@ Windows なら `fonts/KleeOne-SemiBold.ttf` をダブルクリックしてイン
 
 | 公開日 | 問い | 動画 | コード |
 |---|---|---|---|
+| 2026-10-20 | 渋滞で車線を変える車は、早く着く？（片側2車線・5km） | [見る](https://youtube.com/shorts/eCsPgwDnBZ0) | [`shasen-henkou.py`](sims/shasen-henkou.py) |
 | 2026-10-19 | レジ、カゴが軽い列と人が少ない列、どっちが早い？（5人×8点 と 2人×20点） | [見る](https://youtube.com/shorts/CDIkJ-6qvmc) | [`reji-ninzu.py`](sims/reji-ninzu.py) |
 | 2026-10-18 | 30分の外出、エアコン暖房はつけっぱなしと消す、どっちが安い？ | [見る](https://youtube.com/shorts/ihynyMrzOHY) | [`aircon-tsukeppanashi.py`](sims/aircon-tsukeppanashi.py) |
 | 2026-10-17 | 1万人と5千人が弓で撃ち合う（腕前は同じ）。勝った側は何人残る？ 腕前・刀・狭い道・分けて戦うと？（ランチェスターの法則） | [見る](https://youtube.com/shorts/J8JWkF_Oqy0) | [`kassen-long.py`](sims/kassen-long.py) |
