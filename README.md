@@ -26,6 +26,8 @@ Windows なら `fonts/KleeOne-SemiBold.ttf` をダブルクリックしてイン
 
 | 公開日 | 問い | 動画 | コード |
 |---|---|---|---|
+| 2026-10-21 | エスカレーターの片側あけが2列で立つより早くなるのは、歩く人が何割のとき？（電車1本・朝の混雑・ゆっくり歩く人・長いエスカレーター・横に階段） | [見る](https://youtube.com/shorts/uObC0AazxKY) | [`escalator-long.py`](sims/escalator-long.py) |
+| 2026-10-21 | 持久走、最初に飛ばす？同じペースで走る？（同じ力の2人・1,500m） | [見る](https://youtube.com/shorts/5FRq6Np83oM) | [`jikyusou-pace.py`](sims/jikyusou-pace.py) |
 | 2026-10-20 | 渋滞で車線を変える車は、早く着く？（片側2車線・5km） | [見る](https://youtube.com/shorts/eCsPgwDnBZ0) | [`shasen-henkou.py`](sims/shasen-henkou.py) |
 | 2026-10-19 | レジ、カゴが軽い列と人が少ない列、どっちが早い？（5人×8点 と 2人×20点） | [見る](https://youtube.com/shorts/CDIkJ-6qvmc) | [`reji-ninzu.py`](sims/reji-ninzu.py) |
 | 2026-10-18 | 30分の外出、エアコン暖房はつけっぱなしと消す、どっちが安い？ | [見る](https://youtube.com/shorts/ihynyMrzOHY) | [`aircon-tsukeppanashi.py`](sims/aircon-tsukeppanashi.py) |

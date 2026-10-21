@@ -167,6 +167,18 @@
       "question": "渋滞で車線を変える車は、早く着く？（片側2車線・5km）",
       "youtube_id": "eCsPgwDnBZ0",
       "slug": "shasen-henkou"
+    },
+    {
+      "date": "2026-10-21",
+      "question": "エスカレーターの片側あけが2列で立つより早くなるのは、歩く人が何割のとき？（電車1本・朝の混雑・ゆっくり歩く人・長いエスカレーター・横に階段）",
+      "youtube_id": "uObC0AazxKY",
+      "slug": "escalator-long"
+    },
+    {
+      "date": "2026-10-21",
+      "question": "持久走、最初に飛ばす？同じペースで走る？（同じ力の2人・1,500m）",
+      "youtube_id": "5FRq6Np83oM",
+      "slug": "jikyusou-pace"
     }
   ]
 }
