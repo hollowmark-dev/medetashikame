@@ -26,6 +26,7 @@ Windows なら `fonts/KleeOne-SemiBold.ttf` をダブルクリックしてイン
 
 | 公開日 | 問い | 動画 | コード |
 |---|---|---|---|
+| 2026-10-23 | 焼き芋、レンジとじっくり焼く、どっちが甘い？ | [見る](https://youtube.com/shorts/wxKbiD0QjXw) | [`yakiimo-amasa.py`](sims/yakiimo-amasa.py) |
 | 2026-10-22 | 階段とエレベーター、3階までどっちが早い？ | [見る](https://youtube.com/shorts/QK46V-ceLos) | [`kaidan-elevator.py`](sims/kaidan-elevator.py) |
 | 2026-10-21 | エスカレーターの片側あけが2列で立つより早くなるのは、歩く人が何割のとき？（電車1本・朝の混雑・ゆっくり歩く人・長いエスカレーター・横に階段） | [見る](https://youtube.com/shorts/uObC0AazxKY) | [`escalator-long.py`](sims/escalator-long.py) |
 | 2026-10-21 | 持久走、最初に飛ばす？同じペースで走る？（同じ力の2人・1,500m） | [見る](https://youtube.com/shorts/5FRq6Np83oM) | [`jikyusou-pace.py`](sims/jikyusou-pace.py) |
