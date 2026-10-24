@@ -26,6 +26,8 @@ Windows なら `fonts/KleeOne-SemiBold.ttf` をダブルクリックしてイン
 
 | 公開日 | 問い | 動画 | コード |
 |---|---|---|---|
+| 2026-10-24 | お湯500mL、やかん（ガス・強火）と電気ケトル、どっちが早く沸く？ | [見る](https://youtube.com/shorts/sPQZc6wt7RI) | [`yakan-kettle.py`](sims/yakan-kettle.py) |
+| 2026-10-24 | 伊能忠敬のように歩いて測った日本地図は、測り方の工夫を足すとどこまで正確になる？（1800年の第1次測量の道すじ・1万回） | [見る](https://youtube.com/shorts/U2sVcZdJ0rM) | [`inoh-long.py`](sims/inoh-long.py) |
 | 2026-10-23 | 焼き芋、レンジとじっくり焼く、どっちが甘い？ | [見る](https://youtube.com/shorts/wxKbiD0QjXw) | [`yakiimo-amasa.py`](sims/yakiimo-amasa.py) |
 | 2026-10-22 | 階段とエレベーター、3階までどっちが早い？ | [見る](https://youtube.com/shorts/QK46V-ceLos) | [`kaidan-elevator.py`](sims/kaidan-elevator.py) |
 | 2026-10-21 | エスカレーターの片側あけが2列で立つより早くなるのは、歩く人が何割のとき？（電車1本・朝の混雑・ゆっくり歩く人・長いエスカレーター・横に階段） | [見る](https://youtube.com/shorts/uObC0AazxKY) | [`escalator-long.py`](sims/escalator-long.py) |
