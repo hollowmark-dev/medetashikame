@@ -26,6 +26,7 @@ Windows なら `fonts/KleeOne-SemiBold.ttf` をダブルクリックしてイン
 
 | 公開日 | 問い | 動画 | コード |
 |---|---|---|---|
+| 2026-10-26 | 駅の改札、空いている端と人の多い真ん中、どっちが早い？ | [見る](https://youtube.com/shorts/RP8V356WreM) | [`kaisatsu-hashi.py`](sims/kaisatsu-hashi.py) |
 | 2026-10-25 | 冷える夜、毛布は羽毛布団の上？下？ | [見る](https://youtube.com/shorts/151jhIgaAQI) | [`moufu-kasane.py`](sims/moufu-kasane.py) |
 | 2026-10-24 | お湯500mL、やかん（ガス・強火）と電気ケトル、どっちが早く沸く？ | [見る](https://youtube.com/shorts/sPQZc6wt7RI) | [`yakan-kettle.py`](sims/yakan-kettle.py) |
 | 2026-10-24 | 伊能忠敬のように歩いて測った日本地図は、測り方の工夫を足すとどこまで正確になる？（1800年の第1次測量の道すじ・1万回） | [見る](https://youtube.com/shorts/U2sVcZdJ0rM) | [`inoh-long.py`](sims/inoh-long.py) |
