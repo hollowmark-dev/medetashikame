@@ -26,6 +26,8 @@ Windows なら `fonts/KleeOne-SemiBold.ttf` をダブルクリックしてイン
 
 | 公開日 | 問い | 動画 | コード |
 |---|---|---|---|
+| 2026-10-27 | エレベーターを待つか、階段で行くか。何階までなら階段が早い？（3階・逆転する階・表示を見てから決める・朝の混雑・下り） | [見る](https://youtube.com/shorts/r5QoJI6xmEU) | [`kaidan-long.py`](sims/kaidan-long.py) |
+| 2026-10-27 | お風呂上がり、タオルで拭いてからドライヤー？すぐドライヤー？どっちが早く乾く？ | [見る](https://youtube.com/shorts/XwEmkpOQpP8) | [`dryer-towel.py`](sims/dryer-towel.py) |
 | 2026-10-26 | 駅の改札、空いている端と人の多い真ん中、どっちが早い？ | [見る](https://youtube.com/shorts/RP8V356WreM) | [`kaisatsu-hashi.py`](sims/kaisatsu-hashi.py) |
 | 2026-10-25 | 冷える夜、毛布は羽毛布団の上？下？ | [見る](https://youtube.com/shorts/151jhIgaAQI) | [`moufu-kasane.py`](sims/moufu-kasane.py) |
 | 2026-10-24 | お湯500mL、やかん（ガス・強火）と電気ケトル、どっちが早く沸く？ | [見る](https://youtube.com/shorts/sPQZc6wt7RI) | [`yakan-kettle.py`](sims/yakan-kettle.py) |
