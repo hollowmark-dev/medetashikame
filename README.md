@@ -26,6 +26,8 @@ Windows なら `fonts/KleeOne-SemiBold.ttf` をダブルクリックしてイン
 
 | 公開日 | 問い | 動画 | コード |
 |---|---|---|---|
+| 2026-10-29 | 寒い朝、エアコン暖房の風向きは上？下？足もとが早く暖まるのは？ | [見る](https://youtube.com/shorts/I9mjuVtb9uI) | [`aircon-kazamuki.py`](sims/aircon-kazamuki.py) |
+| 2026-10-29 | 2200年前のエラトステネスは、棒1本と影で地球の大きさを当てた？（棒を長く・距離をきちんと・何日も平均・影の先をくっきり・町が近かったら・本人の答えは当たっていた？） | [見る](https://youtube.com/shorts/l7HKJpa1SLU) | [`chikyu-long.py`](sims/chikyu-long.py) |
 | 2026-10-28 | 寒い朝、洗濯物は外干しと部屋干し、どっちが早く乾く？ | [見る](https://youtube.com/shorts/Dw6vmJiusWI) | [`sentaku-hoshi.py`](sims/sentaku-hoshi.py) |
 | 2026-10-27 | エレベーターを待つか、階段で行くか。何階までなら階段が早い？（3階・逆転する階・表示を見てから決める・朝の混雑・下り） | [見る](https://youtube.com/shorts/r5QoJI6xmEU) | [`kaidan-long.py`](sims/kaidan-long.py) |
 | 2026-10-27 | お風呂上がり、タオルで拭いてからドライヤー？すぐドライヤー？どっちが早く乾く？ | [見る](https://youtube.com/shorts/XwEmkpOQpP8) | [`dryer-towel.py`](sims/dryer-towel.py) |
