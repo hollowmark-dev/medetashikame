@@ -26,6 +26,7 @@ Windows なら `fonts/KleeOne-SemiBold.ttf` をダブルクリックしてイン
 
 | 公開日 | 問い | 動画 | コード |
 |---|---|---|---|
+| 2026-10-30 | 冬、遠くの電車の音がよく聞こえるのは、昼？夜？ | [見る](https://youtube.com/shorts/KtJV2fgaVfk) | [`yoru-oto.py`](sims/yoru-oto.py) |
 | 2026-10-29 | 寒い朝、エアコン暖房の風向きは上？下？足もとが早く暖まるのは？ | [見る](https://youtube.com/shorts/I9mjuVtb9uI) | [`aircon-kazamuki.py`](sims/aircon-kazamuki.py) |
 | 2026-10-29 | 2200年前のエラトステネスは、棒1本と影で地球の大きさを当てた？（棒を長く・距離をきちんと・何日も平均・影の先をくっきり・町が近かったら・本人の答えは当たっていた？） | [見る](https://youtube.com/shorts/l7HKJpa1SLU) | [`chikyu-long.py`](sims/chikyu-long.py) |
 | 2026-10-28 | 寒い朝、洗濯物は外干しと部屋干し、どっちが早く乾く？ | [見る](https://youtube.com/shorts/Dw6vmJiusWI) | [`sentaku-hoshi.py`](sims/sentaku-hoshi.py) |
