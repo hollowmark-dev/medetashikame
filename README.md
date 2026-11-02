@@ -26,6 +26,7 @@ Windows なら `fonts/KleeOne-SemiBold.ttf` をダブルクリックしてイン
 
 | 公開日 | 問い | 動画 | コード |
 |---|---|---|---|
+| 2026-11-02 | シャボン玉が長く割れないのは、冬？夏？ | [見る](https://youtube.com/shorts/BLLTzLuPxEs) | [`shabon-kisetsu.py`](sims/shabon-kisetsu.py) |
 | 2026-11-01 | 電車の窓が曇るのは、外が寒いから？人が多いから？ | [見る](https://youtube.com/shorts/2lvaAz4uXkM) | [`densha-kumori.py`](sims/densha-kumori.py) |
 | 2026-10-31 | やかんの湯気、白く見えるのは口のすぐそば？少し離れたところ？ | [見る](https://youtube.com/shorts/x3p5WkJJMGM) | [`yakan-yuge.py`](sims/yakan-yuge.py) |
 | 2026-10-31 | 桶狭間をもう一度戦ったら、2千人の織田は2万5千人の今川に勝てる？（条件をひとつずつ足して勝率を見る） | [見る](https://youtube.com/shorts/TclMzmEREkc) | [`okehazama-long.py`](sims/okehazama-long.py) |
