@@ -26,6 +26,8 @@ Windows なら `fonts/KleeOne-SemiBold.ttf` をダブルクリックしてイン
 
 | 公開日 | 問い | 動画 | コード |
 |---|---|---|---|
+| 2026-11-03 | 満員電車で座っている人の前に立つとき、どこに立てば・どの駅で座れる？（例えば中央線の朝の上り。公表の数字をもとにした模型） | [見る](https://youtube.com/shorts/KRhY8bzN0xg) | [`densha-long.py`](sims/densha-long.py) |
+| 2026-11-03 | カーテンを閉めると、窓の結露は増える？減る？ | [見る](https://youtube.com/shorts/3BtEacNSd6w) | [`kaaten-ketsuro.py`](sims/kaaten-ketsuro.py) |
 | 2026-11-02 | シャボン玉が長く割れないのは、冬？夏？ | [見る](https://youtube.com/shorts/BLLTzLuPxEs) | [`shabon-kisetsu.py`](sims/shabon-kisetsu.py) |
 | 2026-11-01 | 電車の窓が曇るのは、外が寒いから？人が多いから？ | [見る](https://youtube.com/shorts/2lvaAz4uXkM) | [`densha-kumori.py`](sims/densha-kumori.py) |
 | 2026-10-31 | やかんの湯気、白く見えるのは口のすぐそば？少し離れたところ？ | [見る](https://youtube.com/shorts/x3p5WkJJMGM) | [`yakan-yuge.py`](sims/yakan-yuge.py) |
