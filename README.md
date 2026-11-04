@@ -26,6 +26,7 @@ Windows なら `fonts/KleeOne-SemiBold.ttf` をダブルクリックしてイン
 
 | 公開日 | 問い | 動画 | コード |
 |---|---|---|---|
+| 2026-11-04 | マグカップと湯のみ、冷めにくいのは？ | [見る](https://youtube.com/shorts/Eq1KeJuzSEk) | [`magu-yunomi.py`](sims/magu-yunomi.py) |
 | 2026-11-03 | 満員電車で座っている人の前に立つとき、どこに立てば・どの駅で座れる？（例えば中央線の朝の上り。公表の数字をもとにした模型） | [見る](https://youtube.com/shorts/KRhY8bzN0xg) | [`densha-long.py`](sims/densha-long.py) |
 | 2026-11-03 | カーテンを閉めると、窓の結露は増える？減る？ | [見る](https://youtube.com/shorts/3BtEacNSd6w) | [`kaaten-ketsuro.py`](sims/kaaten-ketsuro.py) |
 | 2026-11-02 | シャボン玉が長く割れないのは、冬？夏？ | [見る](https://youtube.com/shorts/BLLTzLuPxEs) | [`shabon-kisetsu.py`](sims/shabon-kisetsu.py) |
