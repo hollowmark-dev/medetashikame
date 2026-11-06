@@ -26,6 +26,7 @@ Windows なら `fonts/KleeOne-SemiBold.ttf` をダブルクリックしてイン
 
 | 公開日 | 問い | 動画 | コード |
 |---|---|---|---|
+| 2026-11-06 | おにぎり、アルミホイルとラップ、冷めにくいのは？ | [見る](https://youtube.com/shorts/WyXjH45Ntkk) | [`onigiri-tsutsumi.py`](sims/onigiri-tsutsumi.py) |
 | 2026-11-05 | 長篠の戦い、鉄砲の三段撃ちは本当に強かった？（鉄砲の数・撃ち方・馬を下りる・柵・当たりやすさを変えて、柵を越えるまでに止められた人数を見る） | [見る](https://youtube.com/shorts/xEq_06g1ODc) | [`nagashino-long.py`](sims/nagashino-long.py) |
 | 2026-11-05 | 冬の外で、スマホの電池が急に減るのは、寒さ？使いすぎ？ | [見る](https://youtube.com/shorts/qrisEIY2GFQ) | [`sumaho-samusa.py`](sims/sumaho-samusa.py) |
 | 2026-11-04 | マグカップと湯のみ、冷めにくいのは？ | [見る](https://youtube.com/shorts/Eq1KeJuzSEk) | [`magu-yunomi.py`](sims/magu-yunomi.py) |
