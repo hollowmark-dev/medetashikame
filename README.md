@@ -26,6 +26,8 @@ Windows なら `fonts/KleeOne-SemiBold.ttf` をダブルクリックしてイン
 
 | 公開日 | 問い | 動画 | コード |
 |---|---|---|---|
+| 2026-11-07 | 宇宙人に出会える確率は？（ドレイクの式の決まっていない数を、2018年の論文と同じ幅から1万回選ぶ。「いる」と「出会える」の差） | [見る](https://youtube.com/shorts/-gCy09ouaSg) | [`uchujin-long.py`](sims/uchujin-long.py) |
+| 2026-11-07 | 加湿器、床に置く？高い所に置く？ | [見る](https://youtube.com/shorts/Pf9hVo3qq4E) | [`kashitsuki-basho.py`](sims/kashitsuki-basho.py) |
 | 2026-11-06 | おにぎり、アルミホイルとラップ、冷めにくいのは？ | [見る](https://youtube.com/shorts/WyXjH45Ntkk) | [`onigiri-tsutsumi.py`](sims/onigiri-tsutsumi.py) |
 | 2026-11-05 | 長篠の戦い、鉄砲の三段撃ちは本当に強かった？（鉄砲の数・撃ち方・馬を下りる・柵・当たりやすさを変えて、柵を越えるまでに止められた人数を見る） | [見る](https://youtube.com/shorts/xEq_06g1ODc) | [`nagashino-long.py`](sims/nagashino-long.py) |
 | 2026-11-05 | 冬の外で、スマホの電池が急に減るのは、寒さ？使いすぎ？ | [見る](https://youtube.com/shorts/qrisEIY2GFQ) | [`sumaho-samusa.py`](sims/sumaho-samusa.py) |
