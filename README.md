@@ -26,6 +26,8 @@ Windows なら `fonts/KleeOne-SemiBold.ttf` をダブルクリックしてイン
 
 | 公開日 | 問い | 動画 | コード |
 |---|---|---|---|
+| 2026-11-10 | 一斉にじゃんけん、1回で決まりやすいのは何人まで？ | [見る](https://youtube.com/shorts/aiYirzi2wjc) | [`janken-issei.py`](sims/janken-issei.py) |
+| 2026-11-10 | もしあなたがツバメのヒナに生まれたら、何日生きられる？（卵1万個・1万回。日本・イギリス・スイスの記録をつないだツバメ） | [見る](https://youtube.com/shorts/5ahi4tLbpwQ) | [`tsubame-long.py`](sims/tsubame-long.py) |
 | 2026-11-09 | 冬の夕焼けが赤いと言われるのは、空気が澄んでいるから？太陽が低いから？ | [見る](https://youtube.com/shorts/LaaAO6qcXh4) | [`yuuyake-akai.py`](sims/yuuyake-akai.py) |
 | 2026-11-08 | お湯と水、冷凍庫で先に凍るのは？ | [見る](https://youtube.com/shorts/pSZbPnmK8Mg) | [`oyu-mizu-touketsu.py`](sims/oyu-mizu-touketsu.py) |
 | 2026-11-07 | 宇宙人に出会える確率は？（ドレイクの式の決まっていない数を、2018年の論文と同じ幅から1万回選ぶ。「いる」と「出会える」の差） | [見る](https://youtube.com/shorts/-gCy09ouaSg) | [`uchujin-long.py`](sims/uchujin-long.py) |
