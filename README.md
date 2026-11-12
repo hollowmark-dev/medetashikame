@@ -26,6 +26,8 @@ Windows なら `fonts/KleeOne-SemiBold.ttf` をダブルクリックしてイン
 
 | 公開日 | 問い | 動画 | コード |
 |---|---|---|---|
+| 2026-11-12 | 1,000の名字は、何年で1つになる？ | [見る](https://youtube.com/shorts/wQzjJ12UYIU) | [`myoji-kieru.py`](sims/myoji-kieru.py) |
+| 2026-11-12 | 江戸の夜、提灯なしで月明かりだけで家に帰れる？（1万人・夜と天気は江戸の日記からくじ。最悪・最良・中央値／満月の夜なら／冬と夏） | [見る](https://youtube.com/shorts/rt1W9xHgo7E) | [`yomichi-long.py`](sims/yomichi-long.py) |
 | 2026-11-11 | サメに襲われたら、イワシの群れの真ん中は安全？ | [見る](https://youtube.com/shorts/Ti0Lk1kqUVA) | [`iwashi-mure.py`](sims/iwashi-mure.py) |
 | 2026-11-10 | 一斉にじゃんけん、1回で決まりやすいのは何人まで？ | [見る](https://youtube.com/shorts/aiYirzi2wjc) | [`janken-issei.py`](sims/janken-issei.py) |
 | 2026-11-10 | もしあなたがツバメのヒナに生まれたら、何日生きられる？（卵1万個・1万回。日本・イギリス・スイスの記録をつないだツバメ） | [見る](https://youtube.com/shorts/5ahi4tLbpwQ) | [`tsubame-long.py`](sims/tsubame-long.py) |
