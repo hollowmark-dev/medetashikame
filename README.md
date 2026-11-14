@@ -26,6 +26,8 @@ Windows なら `fonts/KleeOne-SemiBold.ttf` をダブルクリックしてイン
 
 | 公開日 | 問い | 動画 | コード |
 |---|---|---|---|
+| 2026-11-14 | 10回に9回、アリが近道にそろうのは何匹から？ | [見る](https://youtube.com/shorts/NJ67oKbZrNE) | [`ari-chikamichi.py`](sims/ari-chikamichi.py) |
+| 2026-11-14 | もし江戸で手紙を出したら、返事は何日後に来る？（1万通・川止めと天気は江戸の日記からくじ） | [見る](https://youtube.com/shorts/2aHYBpboGCY) | [`hikyaku-long.py`](sims/hikyaku-long.py) |
 | 2026-11-13 | 隕石が1万個落ちて、人の住む所に当たるのは何個？ | [見る](https://youtube.com/shorts/CCCvPeqKcj0) | [`inseki-ochiru.py`](sims/inseki-ochiru.py) |
 | 2026-11-12 | 1,000の名字は、何年で1つになる？ | [見る](https://youtube.com/shorts/wQzjJ12UYIU) | [`myoji-kieru.py`](sims/myoji-kieru.py) |
 | 2026-11-12 | 江戸の夜、提灯なしで月明かりだけで家に帰れる？（1万人・夜と天気は江戸の日記からくじ。最悪・最良・中央値／満月の夜なら／冬と夏） | [見る](https://youtube.com/shorts/rt1W9xHgo7E) | [`yomichi-long.py`](sims/yomichi-long.py) |
