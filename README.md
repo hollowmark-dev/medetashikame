@@ -26,6 +26,7 @@ Windows なら `fonts/KleeOne-SemiBold.ttf` をダブルクリックしてイン
 
 | 公開日 | 問い | 動画 | コード |
 |---|---|---|---|
+| 2026-11-16 | 1万人の町で、うわさは何割の人に届く？ | [見る](https://youtube.com/shorts/qsrRaFv1Xjw) | [`uwasa-todoku.py`](sims/uwasa-todoku.py) |
 | 2026-11-15 | 関ヶ原、寝返った隊が西軍のまま戦っていたら、どちらが勝つ？ | [見る](https://youtube.com/shorts/D5l6uZWxI18) | [`sekigahara-negaeri.py`](sims/sekigahara-negaeri.py) |
 | 2026-11-14 | 10回に9回、アリが近道にそろうのは何匹から？ | [見る](https://youtube.com/shorts/NJ67oKbZrNE) | [`ari-chikamichi.py`](sims/ari-chikamichi.py) |
 | 2026-11-14 | もし江戸で手紙を出したら、返事は何日後に来る？（1万通・川止めと天気は江戸の日記からくじ） | [見る](https://youtube.com/shorts/2aHYBpboGCY) | [`hikyaku-long.py`](sims/hikyaku-long.py) |
