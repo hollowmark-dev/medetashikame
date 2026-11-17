@@ -26,6 +26,8 @@ Windows なら `fonts/KleeOne-SemiBold.ttf` をダブルクリックしてイン
 
 | 公開日 | 問い | 動画 | コード |
 |---|---|---|---|
+| 2026-11-17 | もし昭和の団地に申し込んだら、あなたは何回目で当たる？（1万人・倍率51.4倍。運だけ／低めの団地／何度も落ちた人を先に入れる決まり） | [見る](https://youtube.com/shorts/19Ne0PjPZ_k) | [`danchi-long.py`](sims/danchi-long.py) |
+| 2026-11-17 | トランプ7回、リフルとヒンズー、どっちが混ざる？ | [見る](https://youtube.com/shorts/KKF51eg7pNY) | [`toranpu-kiri.py`](sims/toranpu-kiri.py) |
 | 2026-11-16 | 1万人の町で、うわさは何割の人に届く？ | [見る](https://youtube.com/shorts/qsrRaFv1Xjw) | [`uwasa-todoku.py`](sims/uwasa-todoku.py) |
 | 2026-11-15 | 関ヶ原、寝返った隊が西軍のまま戦っていたら、どちらが勝つ？ | [見る](https://youtube.com/shorts/D5l6uZWxI18) | [`sekigahara-negaeri.py`](sims/sekigahara-negaeri.py) |
 | 2026-11-14 | 10回に9回、アリが近道にそろうのは何匹から？ | [見る](https://youtube.com/shorts/NJ67oKbZrNE) | [`ari-chikamichi.py`](sims/ari-chikamichi.py) |
