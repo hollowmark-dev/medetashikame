@@ -26,6 +26,7 @@ Windows なら `fonts/KleeOne-SemiBold.ttf` をダブルクリックしてイン
 
 | 公開日 | 問い | 動画 | コード |
 |---|---|---|---|
+| 2026-11-18 | 分からない20問、同じ番号で埋める？ばらばら？ | [見る](https://youtube.com/shorts/0GShAxLgd-s) | [`marksheet-umekata.py`](sims/marksheet-umekata.py) |
 | 2026-11-17 | もし昭和の団地に申し込んだら、あなたは何回目で当たる？（1万人・倍率51.4倍。運だけ／低めの団地／何度も落ちた人を先に入れる決まり） | [見る](https://youtube.com/shorts/19Ne0PjPZ_k) | [`danchi-long.py`](sims/danchi-long.py) |
 | 2026-11-17 | トランプ7回、リフルとヒンズー、どっちが混ざる？ | [見る](https://youtube.com/shorts/KKF51eg7pNY) | [`toranpu-kiri.py`](sims/toranpu-kiri.py) |
 | 2026-11-16 | 1万人の町で、うわさは何割の人に届く？ | [見る](https://youtube.com/shorts/qsrRaFv1Xjw) | [`uwasa-todoku.py`](sims/uwasa-todoku.py) |
