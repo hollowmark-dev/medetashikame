@@ -425,6 +425,12 @@
       "question": "もしあなたがサケの卵だったら、4年後にふるさとの海へ帰れますか？（卵1万粒・1万回。帰ってきて人に捕られるのは中央値約80匹）",
       "youtube_id": "7Pvr11JhfAs",
       "slug": "salmon-long"
+    },
+    {
+      "date": "2026-11-20",
+      "question": "サイコロ勝負、3回で止める？6回まで振る？",
+      "youtube_id": "C8yuC8r5oPY",
+      "slug": "saikoro-tomeru"
     }
   ]
 }
