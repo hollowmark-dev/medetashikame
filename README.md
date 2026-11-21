@@ -26,6 +26,8 @@ Windows なら `fonts/KleeOne-SemiBold.ttf` をダブルクリックしてイン
 
 | 公開日 | 問い | 動画 | コード |
 |---|---|---|---|
+| 2026-11-21 | もしあなたが19世紀の捕鯨船の新米なら、何年で帰れて、いくら稼げる？（新米1万人・1万回。ニューベッドフォード1840〜58年） | [見る](https://youtube.com/shorts/LcFqXtHC_QM) | [`whaling-long.py`](sims/whaling-long.py) |
+| 2026-11-21 | テストで迷った答え、最初のまま？書き換える？ | [見る](https://youtube.com/shorts/sZhff6HPiUI) | [`minaoshi-kakikae.py`](sims/minaoshi-kakikae.py) |
 | 2026-11-20 | サイコロ勝負、3回で止める？6回まで振る？ | [見る](https://youtube.com/shorts/C8yuC8r5oPY) | [`saikoro-tomeru.py`](sims/saikoro-tomeru.py) |
 | 2026-11-19 | 15×15の迷路、右手をつける？気分で選ぶ？ | [見る](https://youtube.com/shorts/UhgUSd-N_xs) | [`meiro-migite.py`](sims/meiro-migite.py) |
 | 2026-11-19 | もしあなたがサケの卵だったら、4年後にふるさとの海へ帰れますか？（卵1万粒・1万回。帰ってきて人に捕られるのは中央値約80匹） | [見る](https://youtube.com/shorts/7Pvr11JhfAs) | [`salmon-long.py`](sims/salmon-long.py) |

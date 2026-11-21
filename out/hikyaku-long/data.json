@@ -1,0 +1,2380 @@
+{
+ "slug": "hikyaku-long",
+ "made": "2026-10-28 22:51",
+ "n": 10000,
+ "main_seed": 2026,
+ "rob_seeds": [
+  2027,
+  2028,
+  2029,
+  2030,
+  2031
+ ],
+ "kinds": [
+  "五日限",
+  "六日限",
+  "八日限"
+ ],
+ "p_late1": 0.2727272727272727,
+ "river_frac": 0.5,
+ "off": [
+  3,
+  3,
+  4
+ ],
+ "write_range": [
+  1,
+  3
+ ],
+ "diary_days": 31875,
+ "rain_share": [
+  0.08015478164731896,
+  0.1267021906453523,
+  0.20696937697993664,
+  0.21420824295010846,
+  0.2068230277185501,
+  0.2566079295154185,
+  0.1856925418569254,
+  0.17576703068122726,
+  0.2535675082327113,
+  0.2210242587601078,
+  0.16306253652834599,
+  0.0967391304347826
+ ],
+ "known_days": [
+  1809,
+  1689,
+  1894,
+  1844,
+  1876,
+  1816,
+  1971,
+  1923,
+  1822,
+  1855,
+  1711,
+  1840
+ ],
+ "main": {
+  "seed": 2026,
+  "q1": {
+   "n": 10000,
+   "on_time": 63.7,
+   "d0": 63.7,
+   "d1": 26.150000000000002,
+   "d2_5": 7.3,
+   "d6": 2.85,
+   "d10": 1.49,
+   "d20": 0.42,
+   "T_median": 6.0,
+   "T_mean": 7.184,
+   "delay_median": 0.0,
+   "delay_mean": 0.8243,
+   "delay_max": 28,
+   "T_max": 36,
+   "T_min": 5,
+   "river_hit": 13.089999999999998,
+   "share_days_from_d6": 41.089409195681185,
+   "by_kind": [
+    {
+     "kind": "五日限",
+     "n": 3263,
+     "on_time": 63.5304934109715,
+     "T_median": 5.0,
+     "T_mean": 5.817652467054858,
+     "d1": 26.20288078455409,
+     "d6": 2.9420778424762486,
+     "delay_max": 25
+    },
+    {
+     "kind": "六日限",
+     "n": 3307,
+     "on_time": 64.77169640157243,
+     "T_median": 6.0,
+     "T_mean": 6.8037496220139095,
+     "d1": 25.642576353190204,
+     "d6": 2.691260961596613,
+     "delay_max": 25
+    },
+    {
+     "kind": "八日限",
+     "n": 3430,
+     "on_time": 62.82798833819242,
+     "T_median": 8.0,
+     "T_mean": 8.850437317784257,
+     "d1": 26.588921282798832,
+     "d6": 2.9154518950437316,
+     "delay_max": 28
+    }
+   ],
+   "by_month": [
+    {
+     "month": 1,
+     "n": 860,
+     "on_time": 71.04651162790697,
+     "d6": 0.813953488372093,
+     "river_hit": 3.7209302325581395,
+     "delay_mean": 0.436046511627907
+    },
+    {
+     "month": 2,
+     "n": 779,
+     "on_time": 67.3940949935815,
+     "d6": 1.540436456996149,
+     "river_hit": 8.472400513478819,
+     "delay_mean": 0.631578947368421
+    },
+    {
+     "month": 3,
+     "n": 839,
+     "on_time": 61.38259833134684,
+     "d6": 2.622169249106079,
+     "river_hit": 14.66030989272944,
+     "delay_mean": 0.8426698450536353
+    },
+    {
+     "month": 4,
+     "n": 830,
+     "on_time": 59.397590361445786,
+     "d6": 4.9397590361445785,
+     "river_hit": 19.638554216867472,
+     "delay_mean": 1.146987951807229
+    },
+    {
+     "month": 5,
+     "n": 851,
+     "on_time": 60.0470035252644,
+     "d6": 3.4077555816686247,
+     "river_hit": 16.333725029377202,
+     "delay_mean": 0.9576968272620446
+    },
+    {
+     "month": 6,
+     "n": 826,
+     "on_time": 59.56416464891041,
+     "d6": 3.753026634382567,
+     "river_hit": 17.070217917675546,
+     "delay_mean": 1.1016949152542372
+    },
+    {
+     "month": 7,
+     "n": 851,
+     "on_time": 61.22209165687427,
+     "d6": 3.8777908343125738,
+     "river_hit": 13.866039952996475,
+     "delay_mean": 0.9694477085781433
+    },
+    {
+     "month": 8,
+     "n": 862,
+     "on_time": 65.77726218097449,
+     "d6": 3.248259860788863,
+     "river_hit": 13.109048723897912,
+     "delay_mean": 0.7877030162412993
+    },
+    {
+     "month": 9,
+     "n": 821,
+     "on_time": 61.38855054811205,
+     "d6": 4.019488428745433,
+     "river_hit": 19.366626065773445,
+     "delay_mean": 1.02557856272838
+    },
+    {
+     "month": 10,
+     "n": 845,
+     "on_time": 62.366863905325445,
+     "d6": 2.8402366863905324,
+     "river_hit": 13.254437869822485,
+     "delay_mean": 0.8106508875739645
+    },
+    {
+     "month": 11,
+     "n": 798,
+     "on_time": 66.41604010025063,
+     "d6": 1.6290726817042605,
+     "river_hit": 10.401002506265664,
+     "delay_mean": 0.6102756892230576
+    },
+    {
+     "month": 12,
+     "n": 838,
+     "on_time": 68.4964200477327,
+     "d6": 1.431980906921241,
+     "river_hit": 7.159904534606206,
+     "delay_mean": 0.5656324582338902
+    }
+   ],
+   "cards": {
+    "worst": {
+     "i": 3956,
+     "date": "2月28日",
+     "month": 2,
+     "kind": "八日限",
+     "D": 8,
+     "T": 36,
+     "delay": 28,
+     "normal_delay": 0,
+     "river_wait": 28,
+     "river_len": 28,
+     "river_day": 1
+    },
+    "best": {
+     "i": 0,
+     "date": "12月9日",
+     "month": 12,
+     "kind": "五日限",
+     "D": 5,
+     "T": 5,
+     "delay": 0,
+     "normal_delay": 0,
+     "river_wait": 0,
+     "river_len": 0,
+     "river_day": 0
+    },
+    "median": {
+     "i": 4,
+     "date": "4月23日",
+     "month": 4,
+     "kind": "五日限",
+     "D": 5,
+     "T": 6,
+     "delay": 1,
+     "normal_delay": 1,
+     "river_wait": 0,
+     "river_len": 0,
+     "river_day": 0
+    },
+    "best_n": 2073,
+    "worst_n": 1
+   }
+  },
+  "q2": {
+   "六日限v八日限": {
+    "Df": 6,
+    "Ds": 8,
+    "nominal": 2,
+    "river_hit_any": 17.57,
+    "river_hit_both": 10.100000000000001,
+    "river_hit_fast": 13.8,
+    "A": {
+     "median": 2.0,
+     "mean": 1.9963,
+     "same": 3.05,
+     "reversed": 0.0,
+     "le0": 3.05,
+     "le1": 27.33,
+     "ge2": 72.67,
+     "dist": [
+      {
+       "label": "-1日以下(高い便のほうが遅い)",
+       "pct": 0.0
+      },
+      {
+       "label": "0日(同じ日)",
+       "pct": 3.05
+      },
+      {
+       "label": "1日",
+       "pct": 24.279999999999998
+      },
+      {
+       "label": "2日",
+       "pct": 53.03
+      },
+      {
+       "label": "3日",
+       "pct": 16.96
+      },
+      {
+       "label": "4日以上",
+       "pct": 2.68
+      }
+     ],
+     "hit_median": 1.0,
+     "hit_le0": 17.35913488901537,
+     "both_le0": 22.07920792079208,
+     "both_median": 1.0,
+     "clear_median": 2.0,
+     "cards": {
+      "worst": {
+       "i": 2574,
+       "date": "10月6日",
+       "month": 10,
+       "fast_normal_delay": 1,
+       "slow_normal_delay": 0,
+       "fast_river_wait": 24,
+       "slow_river_wait": 23,
+       "river_len": 24,
+       "T_fast": 31,
+       "T_slow": 31,
+       "gain": 0
+      },
+      "best": {
+       "i": 3716,
+       "date": "1月15日",
+       "month": 1,
+       "fast_normal_delay": 0,
+       "slow_normal_delay": 0,
+       "fast_river_wait": 0,
+       "slow_river_wait": 27,
+       "river_len": 27,
+       "T_fast": 6,
+       "T_slow": 35,
+       "gain": 29
+      },
+      "worst_n": 305,
+      "gmin": 0,
+      "gmax": 29,
+      "typical": {
+       "i": 1,
+       "date": "9月25日",
+       "month": 9,
+       "fast_normal_delay": 1,
+       "slow_normal_delay": 1,
+       "fast_river_wait": 0,
+       "slow_river_wait": 0,
+       "river_len": 0,
+       "T_fast": 7,
+       "T_slow": 9,
+       "gain": 2
+      }
+     }
+    },
+    "B": {
+     "median": 2.0,
+     "mean": 1.8953,
+     "same": 6.83,
+     "reversed": 2.23,
+     "le0": 9.06,
+     "le1": 29.189999999999998,
+     "ge2": 70.81,
+     "dist": [
+      {
+       "label": "-1日以下(高い便のほうが遅い)",
+       "pct": 2.23
+      },
+      {
+       "label": "0日(同じ日)",
+       "pct": 6.83
+      },
+      {
+       "label": "1日",
+       "pct": 20.13
+      },
+      {
+       "label": "2日",
+       "pct": 51.17
+      },
+      {
+       "label": "3日",
+       "pct": 16.96
+      },
+      {
+       "label": "4日以上",
+       "pct": 2.68
+      }
+     ],
+     "hit_median": 0.0,
+     "hit_le0": 51.565167899829255,
+     "both_le0": 81.58415841584159,
+     "both_median": 0.0,
+     "clear_median": 2.0,
+     "cards": {
+      "worst": {
+       "i": 2574,
+       "date": "10月6日",
+       "month": 10,
+       "fast_normal_delay": 1,
+       "slow_normal_delay": 0,
+       "fast_river_wait": 24,
+       "slow_river_wait": 23,
+       "river_len": 24,
+       "T_fast": 32,
+       "T_slow": 31,
+       "gain": -1
+      },
+      "best": {
+       "i": 3716,
+       "date": "1月15日",
+       "month": 1,
+       "fast_normal_delay": 0,
+       "slow_normal_delay": 0,
+       "fast_river_wait": 0,
+       "slow_river_wait": 27,
+       "river_len": 27,
+       "T_fast": 6,
+       "T_slow": 35,
+       "gain": 29
+      },
+      "worst_n": 223,
+      "gmin": -1,
+      "gmax": 29,
+      "typical": {
+       "i": 1,
+       "date": "9月25日",
+       "month": 9,
+       "fast_normal_delay": 1,
+       "slow_normal_delay": 1,
+       "fast_river_wait": 0,
+       "slow_river_wait": 0,
+       "river_len": 0,
+       "T_fast": 7,
+       "T_slow": 9,
+       "gain": 2
+      }
+     }
+    }
+   },
+   "五日限v八日限": {
+    "Df": 5,
+    "Ds": 8,
+    "nominal": 3,
+    "river_hit_any": 17.630000000000003,
+    "river_hit_both": 9.81,
+    "river_hit_fast": 13.819999999999999,
+    "A": {
+     "median": 3.0,
+     "mean": 2.9705,
+     "same": 0.0,
+     "reversed": 0.0,
+     "le0": 0.0,
+     "le1": 2.53,
+     "ge2": 97.47,
+     "dist": [
+      {
+       "label": "-1日以下(高い便のほうが遅い)",
+       "pct": 0.0
+      },
+      {
+       "label": "0日(同じ日)",
+       "pct": 0.0
+      },
+      {
+       "label": "1日",
+       "pct": 2.53
+      },
+      {
+       "label": "2日",
+       "pct": 25.36
+      },
+      {
+       "label": "3日",
+       "pct": 52.75
+      },
+      {
+       "label": "4日以上",
+       "pct": 19.36
+      }
+     ],
+     "hit_median": 2.0,
+     "hit_le0": 0.0,
+     "both_le0": 0.0,
+     "both_median": 2.0,
+     "clear_median": 3.0,
+     "cards": {
+      "worst": {
+       "i": 5744,
+       "date": "7月27日",
+       "month": 7,
+       "fast_normal_delay": 1,
+       "slow_normal_delay": 0,
+       "fast_river_wait": 23,
+       "slow_river_wait": 22,
+       "river_len": 27,
+       "T_fast": 29,
+       "T_slow": 30,
+       "gain": 1
+      },
+      "best": {
+       "i": 6463,
+       "date": "8月4日",
+       "month": 8,
+       "fast_normal_delay": 0,
+       "slow_normal_delay": 1,
+       "fast_river_wait": 0,
+       "slow_river_wait": 21,
+       "river_len": 21,
+       "T_fast": 5,
+       "T_slow": 30,
+       "gain": 25
+      },
+      "worst_n": 253,
+      "gmin": 1,
+      "gmax": 25,
+      "typical": {
+       "i": 0,
+       "date": "9月11日",
+       "month": 9,
+       "fast_normal_delay": 1,
+       "slow_normal_delay": 1,
+       "fast_river_wait": 0,
+       "slow_river_wait": 0,
+       "river_len": 0,
+       "T_fast": 6,
+       "T_slow": 9,
+       "gain": 3
+      }
+     }
+    },
+    "B": {
+     "median": 3.0,
+     "mean": 2.7743,
+     "same": 5.99,
+     "reversed": 1.82,
+     "le0": 7.8100000000000005,
+     "le1": 10.52,
+     "ge2": 89.48,
+     "dist": [
+      {
+       "label": "-1日以下(高い便のほうが遅い)",
+       "pct": 1.82
+      },
+      {
+       "label": "0日(同じ日)",
+       "pct": 5.99
+      },
+      {
+       "label": "1日",
+       "pct": 2.71
+      },
+      {
+       "label": "2日",
+       "pct": 19.37
+      },
+      {
+       "label": "3日",
+       "pct": 50.74999999999999
+      },
+      {
+       "label": "4日以上",
+       "pct": 19.36
+      }
+     ],
+     "hit_median": 1.0,
+     "hit_le0": 44.299489506522974,
+     "both_le0": 79.61264016309887,
+     "both_median": 0.0,
+     "clear_median": 3.0,
+     "cards": {
+      "worst": {
+       "i": 5744,
+       "date": "7月27日",
+       "month": 7,
+       "fast_normal_delay": 1,
+       "slow_normal_delay": 0,
+       "fast_river_wait": 23,
+       "slow_river_wait": 22,
+       "river_len": 27,
+       "T_fast": 31,
+       "T_slow": 30,
+       "gain": -1
+      },
+      "best": {
+       "i": 6463,
+       "date": "8月4日",
+       "month": 8,
+       "fast_normal_delay": 0,
+       "slow_normal_delay": 1,
+       "fast_river_wait": 0,
+       "slow_river_wait": 21,
+       "river_len": 21,
+       "T_fast": 5,
+       "T_slow": 30,
+       "gain": 25
+      },
+      "worst_n": 182,
+      "gmin": -1,
+      "gmax": 25,
+      "typical": {
+       "i": 0,
+       "date": "9月11日",
+       "month": 9,
+       "fast_normal_delay": 1,
+       "slow_normal_delay": 1,
+       "fast_river_wait": 0,
+       "slow_river_wait": 0,
+       "river_len": 0,
+       "T_fast": 6,
+       "T_slow": 9,
+       "gain": 3
+      }
+     }
+    }
+   }
+  },
+  "q3": {
+   "n": 10000,
+   "median": 15.0,
+   "mean": 16.4046,
+   "p90": 20.0,
+   "max": 47,
+   "min": 11,
+   "ge14": 74.46000000000001,
+   "ge21": 9.45,
+   "ge28": 2.35,
+   "both_river": 1.8399999999999999,
+   "any_river": 25.119999999999997,
+   "plan_median": 14.0,
+   "by_kind": [
+    {
+     "kind": "五日限",
+     "n": 3263,
+     "median": 13.0,
+     "mean": 13.714986209010114,
+     "p90": 16.0,
+     "max": 39,
+     "min": 11,
+     "ge14": 36.132393502911434,
+     "ge21": 3.677597303095311,
+     "plan_median": 12.0
+    },
+    {
+     "kind": "六日限",
+     "n": 3307,
+     "median": 15.0,
+     "mean": 15.657393407922589,
+     "p90": 18.0,
+     "max": 43,
+     "min": 13,
+     "ge14": 85.78772301179318,
+     "ge21": 5.654671908073783,
+     "plan_median": 14.0
+    },
+    {
+     "kind": "八日限",
+     "n": 3430,
+     "median": 19.0,
+     "mean": 19.683673469387756,
+     "p90": 22.0,
+     "max": 47,
+     "min": 17,
+     "ge14": 100.0,
+     "ge21": 18.600583090379008,
+     "plan_median": 18.0
+    }
+   ],
+   "cards": {
+    "worst": {
+     "i": 3956,
+     "date": "2月28日",
+     "month": 2,
+     "kind": "八日限",
+     "D": 8,
+     "T": 36,
+     "delay": 28,
+     "normal_delay": 0,
+     "river_wait": 28,
+     "river_len": 28,
+     "river_day": 1,
+     "write": 2,
+     "back_date": "4月7日",
+     "back_normal_delay": 1,
+     "back_river_wait": 0,
+     "back_river_len": 0,
+     "back_river_day": 0,
+     "T2": 9,
+     "reply": 47
+    },
+    "best": {
+     "i": 0,
+     "date": "12月9日",
+     "month": 12,
+     "kind": "五日限",
+     "D": 5,
+     "T": 5,
+     "delay": 0,
+     "normal_delay": 0,
+     "river_wait": 0,
+     "river_len": 0,
+     "river_day": 0,
+     "write": 1,
+     "back_date": "12月15日",
+     "back_normal_delay": 0,
+     "back_river_wait": 0,
+     "back_river_len": 0,
+     "back_river_day": 0,
+     "T2": 5,
+     "reply": 11
+    },
+    "median": {
+     "i": 2,
+     "date": "9月28日",
+     "month": 9,
+     "kind": "六日限",
+     "D": 6,
+     "T": 8,
+     "delay": 2,
+     "normal_delay": 1,
+     "river_wait": 1,
+     "river_len": 1,
+     "river_day": 1,
+     "write": 1,
+     "back_date": "10月7日",
+     "back_normal_delay": 0,
+     "back_river_wait": 0,
+     "back_river_len": 0,
+     "back_river_day": 0,
+     "T2": 6,
+     "reply": 15
+    },
+    "worst_n": 2
+   }
+  },
+  "exact": {
+   "on_time": 62.77216267554009,
+   "d6": 2.911789130413022,
+   "delay_mean": 0.8418107746356878,
+   "river_hit": 13.688276321132378
+  }
+ },
+ "scenarios": [
+  {
+   "name": "少なめ",
+   "days_year": 25,
+   "mean_len": 2.5,
+   "tail_p": 0.02,
+   "annual": 25.0,
+   "EL": 2.4999999999999996,
+   "EW": 3.2853086428135247,
+   "p": [
+    0.03011556877258471,
+    0.04760425339072551,
+    0.0777620545918707,
+    0.08048182453547112,
+    0.07770706858660036,
+    0.0964121364950489,
+    0.06976797141627986,
+    0.0660387813633394,
+    0.09526979645799558,
+    0.08304272219700104,
+    0.06126547826751849,
+    0.036346601858732466
+   ],
+   "flat": {
+    "約束どおりに着いた%": 68.22,
+    "日数の中央値": 6.0,
+    "日数の平均": 6.8523,
+    "6日以上遅れ%": 0.8699999999999999,
+    "いちばん遅れた日数": 25,
+    "急ぎ便の得(A)中央値": 2.0,
+    "差が消えた%(A)": 1.46,
+    "差が消えた%(B)": 3.1199999999999997,
+    "返事の中央値": 15.0,
+    "返事2週間以上%": 70.98,
+    "返事の最長": 44,
+    "六日限の返事の中央値": 15.0,
+    "六日限の返事2週間以上%": 83.48956758391292
+   },
+   "q1_cards": {
+    "worst": {
+     "i": 3139,
+     "date": "1月27日",
+     "month": 1,
+     "kind": "八日限",
+     "D": 8,
+     "T": 33,
+     "delay": 25,
+     "normal_delay": 0,
+     "river_wait": 25,
+     "river_len": 25,
+     "river_day": 1
+    },
+    "best": {
+     "i": 0,
+     "date": "12月9日",
+     "month": 12,
+     "kind": "五日限",
+     "D": 5,
+     "T": 5,
+     "delay": 0,
+     "normal_delay": 0,
+     "river_wait": 0,
+     "river_len": 0,
+     "river_day": 0
+    },
+    "median": {
+     "i": 4,
+     "date": "4月23日",
+     "month": 4,
+     "kind": "五日限",
+     "D": 5,
+     "T": 6,
+     "delay": 1,
+     "normal_delay": 1,
+     "river_wait": 0,
+     "river_len": 0,
+     "river_day": 0
+    },
+    "best_n": 2208,
+    "worst_n": 1
+   },
+   "q1": {
+    "on_time": 68.22,
+    "d0": 68.22,
+    "d1": 27.12,
+    "d2_5": 3.7900000000000005,
+    "d6": 0.8699999999999999,
+    "d10": 0.51,
+    "T_median": 6.0,
+    "T_mean": 6.8523,
+    "delay_max": 25,
+    "river_hit": 6.78
+   },
+   "q2": {
+    "六日限v八日限": {
+     "Df": 6,
+     "Ds": 8,
+     "nominal": 2,
+     "river_hit_any": 9.58,
+     "river_hit_both": 4.32,
+     "river_hit_fast": 6.98,
+     "A": {
+      "median": 2.0,
+      "mean": 1.9957,
+      "same": 1.46,
+      "reversed": 0.0,
+      "le0": 1.46,
+      "le1": 23.62,
+      "ge2": 76.38000000000001,
+      "dist": [
+       {
+        "label": "-1日以下(高い便のほうが遅い)",
+        "pct": 0.0
+       },
+       {
+        "label": "0日(同じ日)",
+        "pct": 1.46
+       },
+       {
+        "label": "1日",
+        "pct": 22.16
+       },
+       {
+        "label": "2日",
+        "pct": 56.32
+       },
+       {
+        "label": "3日",
+        "pct": 18.5
+       },
+       {
+        "label": "4日以上",
+        "pct": 1.5599999999999998
+       }
+      ],
+      "hit_median": 1.0,
+      "hit_le0": 15.24008350730689,
+      "both_le0": 21.296296296296298,
+      "both_median": 1.0,
+      "clear_median": 2.0,
+      "cards": {
+       "worst": {
+        "i": 6003,
+        "date": "11月19日",
+        "month": 11,
+        "fast_normal_delay": 1,
+        "slow_normal_delay": 0,
+        "fast_river_wait": 22,
+        "slow_river_wait": 21,
+        "river_len": 26,
+        "T_fast": 29,
+        "T_slow": 29,
+        "gain": 0
+       },
+       "best": {
+        "i": 3716,
+        "date": "1月15日",
+        "month": 1,
+        "fast_normal_delay": 0,
+        "slow_normal_delay": 0,
+        "fast_river_wait": 0,
+        "slow_river_wait": 26,
+        "river_len": 26,
+        "T_fast": 6,
+        "T_slow": 34,
+        "gain": 28
+       },
+       "worst_n": 146,
+       "gmin": 0,
+       "gmax": 28,
+       "typical": {
+        "i": 1,
+        "date": "9月25日",
+        "month": 9,
+        "fast_normal_delay": 1,
+        "slow_normal_delay": 1,
+        "fast_river_wait": 0,
+        "slow_river_wait": 0,
+        "river_len": 0,
+        "T_fast": 7,
+        "T_slow": 9,
+        "gain": 2
+       }
+      }
+     },
+     "B": {
+      "median": 2.0,
+      "mean": 1.9525,
+      "same": 3.1199999999999997,
+      "reversed": 0.9199999999999999,
+      "le0": 4.04,
+      "le1": 24.44,
+      "ge2": 75.56,
+      "dist": [
+       {
+        "label": "-1日以下(高い便のほうが遅い)",
+        "pct": 0.9199999999999999
+       },
+       {
+        "label": "0日(同じ日)",
+        "pct": 3.1199999999999997
+       },
+       {
+        "label": "1日",
+        "pct": 20.4
+       },
+       {
+        "label": "2日",
+        "pct": 55.50000000000001
+       },
+       {
+        "label": "3日",
+        "pct": 18.5
+       },
+       {
+        "label": "4日以上",
+        "pct": 1.5599999999999998
+       }
+      ],
+      "hit_median": 1.0,
+      "hit_le0": 42.17118997912318,
+      "both_le0": 81.01851851851852,
+      "both_median": 0.0,
+      "clear_median": 2.0,
+      "cards": {
+       "worst": {
+        "i": 6003,
+        "date": "11月19日",
+        "month": 11,
+        "fast_normal_delay": 1,
+        "slow_normal_delay": 0,
+        "fast_river_wait": 22,
+        "slow_river_wait": 21,
+        "river_len": 26,
+        "T_fast": 30,
+        "T_slow": 29,
+        "gain": -1
+       },
+       "best": {
+        "i": 3716,
+        "date": "1月15日",
+        "month": 1,
+        "fast_normal_delay": 0,
+        "slow_normal_delay": 0,
+        "fast_river_wait": 0,
+        "slow_river_wait": 26,
+        "river_len": 26,
+        "T_fast": 6,
+        "T_slow": 34,
+        "gain": 28
+       },
+       "worst_n": 92,
+       "gmin": -1,
+       "gmax": 28,
+       "typical": {
+        "i": 1,
+        "date": "9月25日",
+        "month": 9,
+        "fast_normal_delay": 1,
+        "slow_normal_delay": 1,
+        "fast_river_wait": 0,
+        "slow_river_wait": 0,
+        "river_len": 0,
+        "T_fast": 7,
+        "T_slow": 9,
+        "gain": 2
+       }
+      }
+     }
+    },
+    "五日限v八日限": {
+     "Df": 5,
+     "Ds": 8,
+     "nominal": 3,
+     "river_hit_any": 9.69,
+     "river_hit_both": 4.15,
+     "river_hit_fast": 7.01,
+     "A": {
+      "median": 3.0,
+      "mean": 2.9796,
+      "same": 0.0,
+      "reversed": 0.0,
+      "le0": 0.0,
+      "le1": 1.24,
+      "ge2": 98.76,
+      "dist": [
+       {
+        "label": "-1日以下(高い便のほうが遅い)",
+        "pct": 0.0
+       },
+       {
+        "label": "0日(同じ日)",
+        "pct": 0.0
+       },
+       {
+        "label": "1日",
+        "pct": 1.24
+       },
+       {
+        "label": "2日",
+        "pct": 22.650000000000002
+       },
+       {
+        "label": "3日",
+        "pct": 56.42
+       },
+       {
+        "label": "4日以上",
+        "pct": 19.689999999999998
+       }
+      ],
+      "hit_median": 2.0,
+      "hit_le0": 0.0,
+      "both_le0": 0.0,
+      "both_median": 2.0,
+      "clear_median": 3.0,
+      "cards": {
+       "worst": {
+        "i": 3355,
+        "date": "10月22日",
+        "month": 10,
+        "fast_normal_delay": 1,
+        "slow_normal_delay": 0,
+        "fast_river_wait": 21,
+        "slow_river_wait": 20,
+        "river_len": 26,
+        "T_fast": 27,
+        "T_slow": 28,
+        "gain": 1
+       },
+       "best": {
+        "i": 6463,
+        "date": "8月4日",
+        "month": 8,
+        "fast_normal_delay": 0,
+        "slow_normal_delay": 1,
+        "fast_river_wait": 0,
+        "slow_river_wait": 13,
+        "river_len": 13,
+        "T_fast": 5,
+        "T_slow": 22,
+        "gain": 17
+       },
+       "worst_n": 124,
+       "gmin": 1,
+       "gmax": 17,
+       "typical": {
+        "i": 0,
+        "date": "9月11日",
+        "month": 9,
+        "fast_normal_delay": 1,
+        "slow_normal_delay": 1,
+        "fast_river_wait": 0,
+        "slow_river_wait": 0,
+        "river_len": 0,
+        "T_fast": 6,
+        "T_slow": 9,
+        "gain": 3
+       }
+      }
+     },
+     "B": {
+      "median": 3.0,
+      "mean": 2.8966,
+      "same": 2.52,
+      "reversed": 0.77,
+      "le0": 3.29,
+      "le1": 4.62,
+      "ge2": 95.38,
+      "dist": [
+       {
+        "label": "-1日以下(高い便のほうが遅い)",
+        "pct": 0.77
+       },
+       {
+        "label": "0日(同じ日)",
+        "pct": 2.52
+       },
+       {
+        "label": "1日",
+        "pct": 1.3299999999999998
+       },
+       {
+        "label": "2日",
+        "pct": 20.13
+       },
+       {
+        "label": "3日",
+        "pct": 55.559999999999995
+       },
+       {
+        "label": "4日以上",
+        "pct": 19.689999999999998
+       }
+      ],
+      "hit_median": 2.0,
+      "hit_le0": 33.952528379772964,
+      "both_le0": 79.27710843373494,
+      "both_median": 0.0,
+      "clear_median": 3.0,
+      "cards": {
+       "worst": {
+        "i": 3355,
+        "date": "10月22日",
+        "month": 10,
+        "fast_normal_delay": 1,
+        "slow_normal_delay": 0,
+        "fast_river_wait": 21,
+        "slow_river_wait": 20,
+        "river_len": 26,
+        "T_fast": 29,
+        "T_slow": 28,
+        "gain": -1
+       },
+       "best": {
+        "i": 6463,
+        "date": "8月4日",
+        "month": 8,
+        "fast_normal_delay": 0,
+        "slow_normal_delay": 1,
+        "fast_river_wait": 0,
+        "slow_river_wait": 13,
+        "river_len": 13,
+        "T_fast": 5,
+        "T_slow": 22,
+        "gain": 17
+       },
+       "worst_n": 77,
+       "gmin": -1,
+       "gmax": 17,
+       "typical": {
+        "i": 0,
+        "date": "9月11日",
+        "month": 9,
+        "fast_normal_delay": 1,
+        "slow_normal_delay": 1,
+        "fast_river_wait": 0,
+        "slow_river_wait": 0,
+        "river_len": 0,
+        "T_fast": 6,
+        "T_slow": 9,
+        "gain": 3
+       }
+      }
+     }
+    }
+   },
+   "q3": {
+    "median": 15.0,
+    "mean": 15.7137,
+    "p90": 20.0,
+    "max": 44,
+    "ge14": 70.98,
+    "ge21": 4.34,
+    "by_kind": [
+     {
+      "kind": "五日限",
+      "n": 3263,
+      "median": 13.0,
+      "mean": 13.033098375727858,
+      "p90": 15.0,
+      "max": 38,
+      "min": 11,
+      "ge14": 27.79650628256206,
+      "ge21": 1.164572479313515,
+      "plan_median": 12.0
+     },
+     {
+      "kind": "六日限",
+      "n": 3307,
+      "median": 15.0,
+      "mean": 14.960991835500453,
+      "p90": 16.0,
+      "max": 43,
+      "min": 13,
+      "ge14": 83.48956758391292,
+      "ge21": 1.7236165709101903,
+      "plan_median": 14.0
+     },
+     {
+      "kind": "八日限",
+      "n": 3430,
+      "median": 19.0,
+      "mean": 18.98950437317784,
+      "p90": 20.0,
+      "max": 44,
+      "min": 17,
+      "ge14": 100.0,
+      "ge21": 9.88338192419825,
+      "plan_median": 18.0
+     }
+    ]
+   },
+   "exact": {
+    "on_time": 67.74971770140641,
+    "d6": 0.9414349577789893,
+    "delay_mean": 0.4975783352424523,
+    "river_hit": 6.844138160566189
+   }
+  },
+  {
+   "name": "基準",
+   "days_year": 50,
+   "mean_len": 3.5,
+   "tail_p": 0.04,
+   "annual": 50.0,
+   "EL": 3.5,
+   "EW": 4.157451884791708,
+   "p": [
+    0.06023113754516942,
+    0.09520850678145101,
+    0.1555241091837414,
+    0.16096364907094224,
+    0.1554141371732007,
+    0.1928242729900978,
+    0.1395359428325597,
+    0.1320775627266788,
+    0.19053959291599115,
+    0.16608544439400208,
+    0.12253095653503698,
+    0.07269320371746493
+   ],
+   "flat": {
+    "約束どおりに着いた%": 63.7,
+    "日数の中央値": 6.0,
+    "日数の平均": 7.184,
+    "6日以上遅れ%": 2.85,
+    "いちばん遅れた日数": 28,
+    "急ぎ便の得(A)中央値": 2.0,
+    "差が消えた%(A)": 3.05,
+    "差が消えた%(B)": 6.83,
+    "返事の中央値": 15.0,
+    "返事2週間以上%": 74.46000000000001,
+    "返事の最長": 47,
+    "六日限の返事の中央値": 15.0,
+    "六日限の返事2週間以上%": 85.78772301179318
+   },
+   "q1_cards": {
+    "worst": {
+     "i": 3956,
+     "date": "2月28日",
+     "month": 2,
+     "kind": "八日限",
+     "D": 8,
+     "T": 36,
+     "delay": 28,
+     "normal_delay": 0,
+     "river_wait": 28,
+     "river_len": 28,
+     "river_day": 1
+    },
+    "best": {
+     "i": 0,
+     "date": "12月9日",
+     "month": 12,
+     "kind": "五日限",
+     "D": 5,
+     "T": 5,
+     "delay": 0,
+     "normal_delay": 0,
+     "river_wait": 0,
+     "river_len": 0,
+     "river_day": 0
+    },
+    "median": {
+     "i": 4,
+     "date": "4月23日",
+     "month": 4,
+     "kind": "五日限",
+     "D": 5,
+     "T": 6,
+     "delay": 1,
+     "normal_delay": 1,
+     "river_wait": 0,
+     "river_len": 0,
+     "river_day": 0
+    },
+    "best_n": 2073,
+    "worst_n": 1
+   },
+   "q1": {
+    "on_time": 63.7,
+    "d0": 63.7,
+    "d1": 26.150000000000002,
+    "d2_5": 7.3,
+    "d6": 2.85,
+    "d10": 1.49,
+    "T_median": 6.0,
+    "T_mean": 7.184,
+    "delay_max": 28,
+    "river_hit": 13.089999999999998
+   },
+   "q2": {
+    "六日限v八日限": {
+     "Df": 6,
+     "Ds": 8,
+     "nominal": 2,
+     "river_hit_any": 17.57,
+     "river_hit_both": 10.100000000000001,
+     "river_hit_fast": 13.8,
+     "A": {
+      "median": 2.0,
+      "mean": 1.9963,
+      "same": 3.05,
+      "reversed": 0.0,
+      "le0": 3.05,
+      "le1": 27.33,
+      "ge2": 72.67,
+      "dist": [
+       {
+        "label": "-1日以下(高い便のほうが遅い)",
+        "pct": 0.0
+       },
+       {
+        "label": "0日(同じ日)",
+        "pct": 3.05
+       },
+       {
+        "label": "1日",
+        "pct": 24.279999999999998
+       },
+       {
+        "label": "2日",
+        "pct": 53.03
+       },
+       {
+        "label": "3日",
+        "pct": 16.96
+       },
+       {
+        "label": "4日以上",
+        "pct": 2.68
+       }
+      ],
+      "hit_median": 1.0,
+      "hit_le0": 17.35913488901537,
+      "both_le0": 22.07920792079208,
+      "both_median": 1.0,
+      "clear_median": 2.0,
+      "cards": {
+       "worst": {
+        "i": 2574,
+        "date": "10月6日",
+        "month": 10,
+        "fast_normal_delay": 1,
+        "slow_normal_delay": 0,
+        "fast_river_wait": 24,
+        "slow_river_wait": 23,
+        "river_len": 24,
+        "T_fast": 31,
+        "T_slow": 31,
+        "gain": 0
+       },
+       "best": {
+        "i": 3716,
+        "date": "1月15日",
+        "month": 1,
+        "fast_normal_delay": 0,
+        "slow_normal_delay": 0,
+        "fast_river_wait": 0,
+        "slow_river_wait": 27,
+        "river_len": 27,
+        "T_fast": 6,
+        "T_slow": 35,
+        "gain": 29
+       },
+       "worst_n": 305,
+       "gmin": 0,
+       "gmax": 29,
+       "typical": {
+        "i": 1,
+        "date": "9月25日",
+        "month": 9,
+        "fast_normal_delay": 1,
+        "slow_normal_delay": 1,
+        "fast_river_wait": 0,
+        "slow_river_wait": 0,
+        "river_len": 0,
+        "T_fast": 7,
+        "T_slow": 9,
+        "gain": 2
+       }
+      }
+     },
+     "B": {
+      "median": 2.0,
+      "mean": 1.8953,
+      "same": 6.83,
+      "reversed": 2.23,
+      "le0": 9.06,
+      "le1": 29.189999999999998,
+      "ge2": 70.81,
+      "dist": [
+       {
+        "label": "-1日以下(高い便のほうが遅い)",
+        "pct": 2.23
+       },
+       {
+        "label": "0日(同じ日)",
+        "pct": 6.83
+       },
+       {
+        "label": "1日",
+        "pct": 20.13
+       },
+       {
+        "label": "2日",
+        "pct": 51.17
+       },
+       {
+        "label": "3日",
+        "pct": 16.96
+       },
+       {
+        "label": "4日以上",
+        "pct": 2.68
+       }
+      ],
+      "hit_median": 0.0,
+      "hit_le0": 51.565167899829255,
+      "both_le0": 81.58415841584159,
+      "both_median": 0.0,
+      "clear_median": 2.0,
+      "cards": {
+       "worst": {
+        "i": 2574,
+        "date": "10月6日",
+        "month": 10,
+        "fast_normal_delay": 1,
+        "slow_normal_delay": 0,
+        "fast_river_wait": 24,
+        "slow_river_wait": 23,
+        "river_len": 24,
+        "T_fast": 32,
+        "T_slow": 31,
+        "gain": -1
+       },
+       "best": {
+        "i": 3716,
+        "date": "1月15日",
+        "month": 1,
+        "fast_normal_delay": 0,
+        "slow_normal_delay": 0,
+        "fast_river_wait": 0,
+        "slow_river_wait": 27,
+        "river_len": 27,
+        "T_fast": 6,
+        "T_slow": 35,
+        "gain": 29
+       },
+       "worst_n": 223,
+       "gmin": -1,
+       "gmax": 29,
+       "typical": {
+        "i": 1,
+        "date": "9月25日",
+        "month": 9,
+        "fast_normal_delay": 1,
+        "slow_normal_delay": 1,
+        "fast_river_wait": 0,
+        "slow_river_wait": 0,
+        "river_len": 0,
+        "T_fast": 7,
+        "T_slow": 9,
+        "gain": 2
+       }
+      }
+     }
+    },
+    "五日限v八日限": {
+     "Df": 5,
+     "Ds": 8,
+     "nominal": 3,
+     "river_hit_any": 17.630000000000003,
+     "river_hit_both": 9.81,
+     "river_hit_fast": 13.819999999999999,
+     "A": {
+      "median": 3.0,
+      "mean": 2.9705,
+      "same": 0.0,
+      "reversed": 0.0,
+      "le0": 0.0,
+      "le1": 2.53,
+      "ge2": 97.47,
+      "dist": [
+       {
+        "label": "-1日以下(高い便のほうが遅い)",
+        "pct": 0.0
+       },
+       {
+        "label": "0日(同じ日)",
+        "pct": 0.0
+       },
+       {
+        "label": "1日",
+        "pct": 2.53
+       },
+       {
+        "label": "2日",
+        "pct": 25.36
+       },
+       {
+        "label": "3日",
+        "pct": 52.75
+       },
+       {
+        "label": "4日以上",
+        "pct": 19.36
+       }
+      ],
+      "hit_median": 2.0,
+      "hit_le0": 0.0,
+      "both_le0": 0.0,
+      "both_median": 2.0,
+      "clear_median": 3.0,
+      "cards": {
+       "worst": {
+        "i": 5744,
+        "date": "7月27日",
+        "month": 7,
+        "fast_normal_delay": 1,
+        "slow_normal_delay": 0,
+        "fast_river_wait": 23,
+        "slow_river_wait": 22,
+        "river_len": 27,
+        "T_fast": 29,
+        "T_slow": 30,
+        "gain": 1
+       },
+       "best": {
+        "i": 6463,
+        "date": "8月4日",
+        "month": 8,
+        "fast_normal_delay": 0,
+        "slow_normal_delay": 1,
+        "fast_river_wait": 0,
+        "slow_river_wait": 21,
+        "river_len": 21,
+        "T_fast": 5,
+        "T_slow": 30,
+        "gain": 25
+       },
+       "worst_n": 253,
+       "gmin": 1,
+       "gmax": 25,
+       "typical": {
+        "i": 0,
+        "date": "9月11日",
+        "month": 9,
+        "fast_normal_delay": 1,
+        "slow_normal_delay": 1,
+        "fast_river_wait": 0,
+        "slow_river_wait": 0,
+        "river_len": 0,
+        "T_fast": 6,
+        "T_slow": 9,
+        "gain": 3
+       }
+      }
+     },
+     "B": {
+      "median": 3.0,
+      "mean": 2.7743,
+      "same": 5.99,
+      "reversed": 1.82,
+      "le0": 7.8100000000000005,
+      "le1": 10.52,
+      "ge2": 89.48,
+      "dist": [
+       {
+        "label": "-1日以下(高い便のほうが遅い)",
+        "pct": 1.82
+       },
+       {
+        "label": "0日(同じ日)",
+        "pct": 5.99
+       },
+       {
+        "label": "1日",
+        "pct": 2.71
+       },
+       {
+        "label": "2日",
+        "pct": 19.37
+       },
+       {
+        "label": "3日",
+        "pct": 50.74999999999999
+       },
+       {
+        "label": "4日以上",
+        "pct": 19.36
+       }
+      ],
+      "hit_median": 1.0,
+      "hit_le0": 44.299489506522974,
+      "both_le0": 79.61264016309887,
+      "both_median": 0.0,
+      "clear_median": 3.0,
+      "cards": {
+       "worst": {
+        "i": 5744,
+        "date": "7月27日",
+        "month": 7,
+        "fast_normal_delay": 1,
+        "slow_normal_delay": 0,
+        "fast_river_wait": 23,
+        "slow_river_wait": 22,
+        "river_len": 27,
+        "T_fast": 31,
+        "T_slow": 30,
+        "gain": -1
+       },
+       "best": {
+        "i": 6463,
+        "date": "8月4日",
+        "month": 8,
+        "fast_normal_delay": 0,
+        "slow_normal_delay": 1,
+        "fast_river_wait": 0,
+        "slow_river_wait": 21,
+        "river_len": 21,
+        "T_fast": 5,
+        "T_slow": 30,
+        "gain": 25
+       },
+       "worst_n": 182,
+       "gmin": -1,
+       "gmax": 25,
+       "typical": {
+        "i": 0,
+        "date": "9月11日",
+        "month": 9,
+        "fast_normal_delay": 1,
+        "slow_normal_delay": 1,
+        "fast_river_wait": 0,
+        "slow_river_wait": 0,
+        "river_len": 0,
+        "T_fast": 6,
+        "T_slow": 9,
+        "gain": 3
+       }
+      }
+     }
+    }
+   },
+   "q3": {
+    "median": 15.0,
+    "mean": 16.4046,
+    "p90": 20.0,
+    "max": 47,
+    "ge14": 74.46000000000001,
+    "ge21": 9.45,
+    "by_kind": [
+     {
+      "kind": "五日限",
+      "n": 3263,
+      "median": 13.0,
+      "mean": 13.714986209010114,
+      "p90": 16.0,
+      "max": 39,
+      "min": 11,
+      "ge14": 36.132393502911434,
+      "ge21": 3.677597303095311,
+      "plan_median": 12.0
+     },
+     {
+      "kind": "六日限",
+      "n": 3307,
+      "median": 15.0,
+      "mean": 15.657393407922589,
+      "p90": 18.0,
+      "max": 43,
+      "min": 13,
+      "ge14": 85.78772301179318,
+      "ge21": 5.654671908073783,
+      "plan_median": 14.0
+     },
+     {
+      "kind": "八日限",
+      "n": 3430,
+      "median": 19.0,
+      "mean": 19.683673469387756,
+      "p90": 22.0,
+      "max": 47,
+      "min": 17,
+      "ge14": 100.0,
+      "ge21": 18.600583090379008,
+      "plan_median": 18.0
+     }
+    ]
+   },
+   "exact": {
+    "on_time": 62.77216267554009,
+    "d6": 2.911789130413022,
+    "delay_mean": 0.8418107746356878,
+    "river_hit": 13.688276321132378
+   }
+  },
+  {
+   "name": "多め",
+   "days_year": 80,
+   "mean_len": 4.5,
+   "tail_p": 0.06,
+   "annual": 80.00000000000001,
+   "EL": 4.499999999999999,
+   "EW": 4.696254811155201,
+   "p": [
+    0.09636982007227107,
+    0.1523336108503216,
+    0.24883857469398626,
+    0.2575418385135076,
+    0.24866261947712112,
+    0.3085188367841565,
+    0.22325750853209553,
+    0.2113241003626861,
+    0.30486334866558584,
+    0.2657367110304033,
+    0.1960495304560592,
+    0.11630912594794389
+   ],
+   "flat": {
+    "約束どおりに着いた%": 57.709999999999994,
+    "日数の中央値": 7.0,
+    "日数の平均": 7.6109,
+    "6日以上遅れ%": 5.55,
+    "いちばん遅れた日数": 28,
+    "急ぎ便の得(A)中央値": 2.0,
+    "差が消えた%(A)": 4.93,
+    "差が消えた%(B)": 11.52,
+    "返事の中央値": 16.0,
+    "返事2週間以上%": 78.79,
+    "返事の最長": 60,
+    "六日限の返事の中央値": 15.0,
+    "六日限の返事2週間以上%": 88.32778953734503
+   },
+   "q1_cards": {
+    "worst": {
+     "i": 3956,
+     "date": "2月28日",
+     "month": 2,
+     "kind": "八日限",
+     "D": 8,
+     "T": 36,
+     "delay": 28,
+     "normal_delay": 0,
+     "river_wait": 28,
+     "river_len": 28,
+     "river_day": 1
+    },
+    "best": {
+     "i": 0,
+     "date": "12月9日",
+     "month": 12,
+     "kind": "五日限",
+     "D": 5,
+     "T": 5,
+     "delay": 0,
+     "normal_delay": 0,
+     "river_wait": 0,
+     "river_len": 0,
+     "river_day": 0
+    },
+    "median": {
+     "i": 5,
+     "date": "7月31日",
+     "month": 7,
+     "kind": "六日限",
+     "D": 6,
+     "T": 7,
+     "delay": 1,
+     "normal_delay": 1,
+     "river_wait": 0,
+     "river_len": 0,
+     "river_day": 0
+    },
+    "best_n": 1868,
+    "worst_n": 1
+   },
+   "q1": {
+    "on_time": 57.709999999999994,
+    "d0": 57.709999999999994,
+    "d1": 24.88,
+    "d2_5": 11.86,
+    "d6": 5.55,
+    "d10": 2.54,
+    "T_median": 7.0,
+    "T_mean": 7.6109,
+    "delay_max": 28,
+    "river_hit": 21.11
+   },
+   "q2": {
+    "六日限v八日限": {
+     "Df": 6,
+     "Ds": 8,
+     "nominal": 2,
+     "river_hit_any": 26.88,
+     "river_hit_both": 17.37,
+     "river_hit_fast": 22.15,
+     "A": {
+      "median": 2.0,
+      "mean": 1.9882,
+      "same": 4.93,
+      "reversed": 0.0,
+      "le0": 4.93,
+      "le1": 32.04,
+      "ge2": 67.96,
+      "dist": [
+       {
+        "label": "-1日以下(高い便のほうが遅い)",
+        "pct": 0.0
+       },
+       {
+        "label": "0日(同じ日)",
+        "pct": 4.93
+       },
+       {
+        "label": "1日",
+        "pct": 27.11
+       },
+       {
+        "label": "2日",
+        "pct": 49.01
+       },
+       {
+        "label": "3日",
+        "pct": 15.040000000000001
+       },
+       {
+        "label": "4日以上",
+        "pct": 3.91
+       }
+      ],
+      "hit_median": 1.0,
+      "hit_le0": 18.340773809523807,
+      "both_le0": 21.646516983304547,
+      "both_median": 1.0,
+      "clear_median": 2.0,
+      "cards": {
+       "worst": {
+        "i": 1619,
+        "date": "9月7日",
+        "month": 9,
+        "fast_normal_delay": 1,
+        "slow_normal_delay": 0,
+        "fast_river_wait": 27,
+        "slow_river_wait": 26,
+        "river_len": 27,
+        "T_fast": 34,
+        "T_slow": 34,
+        "gain": 0
+       },
+       "best": {
+        "i": 3716,
+        "date": "1月15日",
+        "month": 1,
+        "fast_normal_delay": 0,
+        "slow_normal_delay": 0,
+        "fast_river_wait": 0,
+        "slow_river_wait": 28,
+        "river_len": 28,
+        "T_fast": 6,
+        "T_slow": 36,
+        "gain": 30
+       },
+       "worst_n": 493,
+       "gmin": 0,
+       "gmax": 30,
+       "typical": {
+        "i": 1,
+        "date": "9月25日",
+        "month": 9,
+        "fast_normal_delay": 1,
+        "slow_normal_delay": 1,
+        "fast_river_wait": 0,
+        "slow_river_wait": 0,
+        "river_len": 0,
+        "T_fast": 7,
+        "T_slow": 9,
+        "gain": 2
+       }
+      }
+     },
+     "B": {
+      "median": 2.0,
+      "mean": 1.8145,
+      "same": 11.52,
+      "reversed": 3.7600000000000002,
+      "le0": 15.28,
+      "le1": 35.3,
+      "ge2": 64.7,
+      "dist": [
+       {
+        "label": "-1日以下(高い便のほうが遅い)",
+        "pct": 3.7600000000000002
+       },
+       {
+        "label": "0日(同じ日)",
+        "pct": 11.52
+       },
+       {
+        "label": "1日",
+        "pct": 20.02
+       },
+       {
+        "label": "2日",
+        "pct": 45.75
+       },
+       {
+        "label": "3日",
+        "pct": 15.040000000000001
+       },
+       {
+        "label": "4日以上",
+        "pct": 3.91
+       }
+      ],
+      "hit_median": 0.0,
+      "hit_le0": 56.845238095238095,
+      "both_le0": 81.23200921128382,
+      "both_median": 0.0,
+      "clear_median": 2.0,
+      "cards": {
+       "worst": {
+        "i": 1619,
+        "date": "9月7日",
+        "month": 9,
+        "fast_normal_delay": 1,
+        "slow_normal_delay": 0,
+        "fast_river_wait": 27,
+        "slow_river_wait": 26,
+        "river_len": 27,
+        "T_fast": 35,
+        "T_slow": 34,
+        "gain": -1
+       },
+       "best": {
+        "i": 3716,
+        "date": "1月15日",
+        "month": 1,
+        "fast_normal_delay": 0,
+        "slow_normal_delay": 0,
+        "fast_river_wait": 0,
+        "slow_river_wait": 28,
+        "river_len": 28,
+        "T_fast": 6,
+        "T_slow": 36,
+        "gain": 30
+       },
+       "worst_n": 376,
+       "gmin": -1,
+       "gmax": 30,
+       "typical": {
+        "i": 1,
+        "date": "9月25日",
+        "month": 9,
+        "fast_normal_delay": 1,
+        "slow_normal_delay": 1,
+        "fast_river_wait": 0,
+        "slow_river_wait": 0,
+        "river_len": 0,
+        "T_fast": 7,
+        "T_slow": 9,
+        "gain": 2
+       }
+      }
+     }
+    },
+    "五日限v八日限": {
+     "Df": 5,
+     "Ds": 8,
+     "nominal": 3,
+     "river_hit_any": 26.31,
+     "river_hit_both": 17.09,
+     "river_hit_fast": 21.87,
+     "A": {
+      "median": 3.0,
+      "mean": 2.9493,
+      "same": 0.0,
+      "reversed": 0.0,
+      "le0": 0.0,
+      "le1": 4.130000000000001,
+      "ge2": 95.87,
+      "dist": [
+       {
+        "label": "-1日以下(高い便のほうが遅い)",
+        "pct": 0.0
+       },
+       {
+        "label": "0日(同じ日)",
+        "pct": 0.0
+       },
+       {
+        "label": "1日",
+        "pct": 4.130000000000001
+       },
+       {
+        "label": "2日",
+        "pct": 28.34
+       },
+       {
+        "label": "3日",
+        "pct": 49.220000000000006
+       },
+       {
+        "label": "4日以上",
+        "pct": 18.310000000000002
+       }
+      ],
+      "hit_median": 2.0,
+      "hit_le0": 0.0,
+      "both_le0": 0.0,
+      "both_median": 2.0,
+      "clear_median": 3.0,
+      "cards": {
+       "worst": {
+        "i": 1943,
+        "date": "9月12日",
+        "month": 9,
+        "fast_normal_delay": 1,
+        "slow_normal_delay": 0,
+        "fast_river_wait": 28,
+        "slow_river_wait": 27,
+        "river_len": 28,
+        "T_fast": 34,
+        "T_slow": 35,
+        "gain": 1
+       },
+       "best": {
+        "i": 6578,
+        "date": "9月29日",
+        "month": 9,
+        "fast_normal_delay": 0,
+        "slow_normal_delay": 0,
+        "fast_river_wait": 0,
+        "slow_river_wait": 24,
+        "river_len": 24,
+        "T_fast": 5,
+        "T_slow": 32,
+        "gain": 27
+       },
+       "worst_n": 413,
+       "gmin": 1,
+       "gmax": 27,
+       "typical": {
+        "i": 0,
+        "date": "9月11日",
+        "month": 9,
+        "fast_normal_delay": 1,
+        "slow_normal_delay": 1,
+        "fast_river_wait": 0,
+        "slow_river_wait": 0,
+        "river_len": 0,
+        "T_fast": 6,
+        "T_slow": 9,
+        "gain": 3
+       }
+      }
+     },
+     "B": {
+      "median": 3.0,
+      "mean": 2.6075,
+      "same": 10.33,
+      "reversed": 3.2800000000000002,
+      "le0": 13.61,
+      "le1": 17.94,
+      "ge2": 82.06,
+      "dist": [
+       {
+        "label": "-1日以下(高い便のほうが遅い)",
+        "pct": 3.2800000000000002
+       },
+       {
+        "label": "0日(同じ日)",
+        "pct": 10.33
+       },
+       {
+        "label": "1日",
+        "pct": 4.33
+       },
+       {
+        "label": "2日",
+        "pct": 18.01
+       },
+       {
+        "label": "3日",
+        "pct": 45.739999999999995
+       },
+       {
+        "label": "4日以上",
+        "pct": 18.310000000000002
+       }
+      ],
+      "hit_median": 0.0,
+      "hit_le0": 51.729380463702014,
+      "both_le0": 79.63721474546517,
+      "both_median": 0.0,
+      "clear_median": 3.0,
+      "cards": {
+       "worst": {
+        "i": 1943,
+        "date": "9月12日",
+        "month": 9,
+        "fast_normal_delay": 1,
+        "slow_normal_delay": 0,
+        "fast_river_wait": 28,
+        "slow_river_wait": 27,
+        "river_len": 28,
+        "T_fast": 36,
+        "T_slow": 35,
+        "gain": -1
+       },
+       "best": {
+        "i": 6578,
+        "date": "9月29日",
+        "month": 9,
+        "fast_normal_delay": 0,
+        "slow_normal_delay": 0,
+        "fast_river_wait": 0,
+        "slow_river_wait": 24,
+        "river_len": 24,
+        "T_fast": 5,
+        "T_slow": 32,
+        "gain": 27
+       },
+       "worst_n": 328,
+       "gmin": -1,
+       "gmax": 27,
+       "typical": {
+        "i": 0,
+        "date": "9月11日",
+        "month": 9,
+        "fast_normal_delay": 1,
+        "slow_normal_delay": 1,
+        "fast_river_wait": 0,
+        "slow_river_wait": 0,
+        "river_len": 0,
+        "T_fast": 6,
+        "T_slow": 9,
+        "gain": 3
+       }
+      }
+     }
+    }
+   },
+   "q3": {
+    "median": 16.0,
+    "mean": 17.288,
+    "p90": 23.0,
+    "max": 60,
+    "ge14": 78.79,
+    "ge21": 15.920000000000002,
+    "by_kind": [
+     {
+      "kind": "五日限",
+      "n": 3263,
+      "median": 13.0,
+      "mean": 14.639901930738585,
+      "p90": 19.0,
+      "max": 54,
+      "min": 11,
+      "ge14": 46.828072326080296,
+      "ge21": 6.895494943303708,
+      "plan_median": 12.0
+     },
+     {
+      "kind": "六日限",
+      "n": 3307,
+      "median": 15.0,
+      "mean": 16.516480193528878,
+      "p90": 21.0,
+      "max": 60,
+      "min": 13,
+      "ge14": 88.32778953734503,
+      "ge21": 10.946477169640158,
+      "plan_median": 14.0
+     },
+     {
+      "kind": "八日限",
+      "n": 3430,
+      "median": 19.0,
+      "mean": 20.551020408163264,
+      "p90": 25.0,
+      "max": 49,
+      "min": 17,
+      "ge14": 100.0,
+      "ge21": 29.300291545189506,
+      "plan_median": 18.0
+     }
+    ]
+   },
+   "exact": {
+    "on_time": 56.7990966445005,
+    "d6": 5.829699997570569,
+    "delay_mean": 1.3012654091999087,
+    "river_hit": 21.901242113811804
+   }
+  }
+ ],
+ "robustness": [
+  {
+   "約束どおりに着いた%": 63.7,
+   "日数の中央値": 6.0,
+   "日数の平均": 7.184,
+   "6日以上遅れ%": 2.85,
+   "いちばん遅れた日数": 28,
+   "急ぎ便の得(A)中央値": 2.0,
+   "差が消えた%(A)": 3.05,
+   "差が消えた%(B)": 6.83,
+   "返事の中央値": 15.0,
+   "返事2週間以上%": 74.46000000000001,
+   "返事の最長": 47,
+   "六日限の返事の中央値": 15.0,
+   "六日限の返事2週間以上%": 85.78772301179318,
+   "seed": 2026
+  },
+  {
+   "約束どおりに着いた%": 63.160000000000004,
+   "日数の中央値": 6.0,
+   "日数の平均": 7.18,
+   "6日以上遅れ%": 3.0300000000000002,
+   "いちばん遅れた日数": 27,
+   "急ぎ便の得(A)中央値": 2.0,
+   "差が消えた%(A)": 2.81,
+   "差が消えた%(B)": 6.45,
+   "返事の中央値": 15.0,
+   "返事2週間以上%": 73.71,
+   "返事の最長": 61,
+   "六日限の返事の中央値": 15.0,
+   "六日限の返事2週間以上%": 86.97715811331949,
+   "seed": 2027
+  },
+  {
+   "約束どおりに着いた%": 63.05,
+   "日数の中央値": 6.0,
+   "日数の平均": 7.1577,
+   "6日以上遅れ%": 2.73,
+   "いちばん遅れた日数": 28,
+   "急ぎ便の得(A)中央値": 2.0,
+   "差が消えた%(A)": 2.54,
+   "差が消えた%(B)": 6.67,
+   "返事の中央値": 15.0,
+   "返事2週間以上%": 74.56,
+   "返事の最長": 69,
+   "六日限の返事の中央値": 15.0,
+   "六日限の返事2週間以上%": 87.11964549483014,
+   "seed": 2028
+  },
+  {
+   "約束どおりに着いた%": 62.53999999999999,
+   "日数の中央値": 7.0,
+   "日数の平均": 7.1912,
+   "6日以上遅れ%": 2.91,
+   "いちばん遅れた日数": 28,
+   "急ぎ便の得(A)中央値": 2.0,
+   "差が消えた%(A)": 2.96,
+   "差が消えた%(B)": 6.5,
+   "返事の中央値": 15.0,
+   "返事2週間以上%": 74.78,
+   "返事の最長": 49,
+   "六日限の返事の中央値": 15.0,
+   "六日限の返事2週間以上%": 87.41559238796808,
+   "seed": 2029
+  },
+  {
+   "約束どおりに着いた%": 62.94,
+   "日数の中央値": 6.0,
+   "日数の平均": 7.1639,
+   "6日以上遅れ%": 3.04,
+   "いちばん遅れた日数": 28,
+   "急ぎ便の得(A)中央値": 2.0,
+   "差が消えた%(A)": 2.82,
+   "差が消えた%(B)": 6.75,
+   "返事の中央値": 15.0,
+   "返事2週間以上%": 72.98,
+   "返事の最長": 59,
+   "六日限の返事の中央値": 15.0,
+   "六日限の返事2週間以上%": 85.54038004750593,
+   "seed": 2030
+  },
+  {
+   "約束どおりに着いた%": 62.11,
+   "日数の中央値": 6.0,
+   "日数の平均": 7.1759,
+   "6日以上遅れ%": 3.0,
+   "いちばん遅れた日数": 29,
+   "急ぎ便の得(A)中央値": 2.0,
+   "差が消えた%(A)": 2.65,
+   "差が消えた%(B)": 6.4,
+   "返事の中央値": 15.0,
+   "返事2週間以上%": 73.14,
+   "返事の最長": 55,
+   "六日限の返事の中央値": 15.0,
+   "六日限の返事2週間以上%": 87.3256159097655,
+   "seed": 2031
+  }
+ ],
+ "checks": {
+  "日記の表": {
+   "ok": true,
+   "detail": "31875日・連続=True・月ごとの日数 2485〜2728・天気が分かる日 月ごと 1689〜1971"
+  },
+  "33件の形": {
+   "ok": true,
+   "detail": "転記: 33件・ちょうど 24（72.7%）・+1日 9（27.3%）・早着 0・+2日以上 0"
+  },
+  "川止めなし(往き)": {
+   "ok": true,
+   "detail": "遅れは0日か1日だけ・+1日 26.8%（33件の 27.3%・標準誤差 0.4。4倍以内）・川止めに当たった 0通"
+  },
+  "川止めなし(急ぎ便の差)": {
+   "ok": true,
+   "detail": "六日限vs八日限: 差 1〜3日・五日限vs八日限: 差 2〜4日（日限の差±ふだんの遅れの差だけ・AとBは同じ）"
+  },
+  "川止めなし(返事)": {
+   "ok": true,
+   "detail": "返事は 往復の日限＋書く時間 に 0〜2日足しただけ（最小 11日・最大 21日）"
+  },
+  "川止めの長さ": {
+   "ok": true,
+   "detail": "少なめ: 平均2.50日・尾2%・最長28日 ／ 基準: 平均3.50日・尾4%・最長28日 ／ 多め: 平均4.50日・尾6%・最長28日"
+  },
+  "川止めの年間日数": {
+   "ok": true,
+   "detail": "少なめ: 月の重みから 25.0日（目標25） ／ 基準: 月の重みから 50.0日（目標50） ／ 多め: 月の重みから 80.0日（目標80） ／ 少なめ: カレンダーのシミュ 25.1日（±0.20） ／ 基準: カレンダーのシミュ 50.2日（±0.30） ／ 多め: カレンダーのシミュ 80.1日（±0.36）"
+  },
+  "月の重み": {
+   "ok": true,
+   "detail": "基準の川止め中の確率 1月6.0%・2月9.5%・3月15.6%・4月16.1%・5月15.5%・6月19.3%・7月14.0%・8月13.2%・9月19.1%・10月16.6%・11月12.3%・12月7.3%（6月/1月＝3.2倍・9月/1月＝3.2倍）"
+  },
+  "到着時の待ち(式＝シミュ)": {
+   "ok": true,
+   "detail": "川止め中に着く確率 式13.70% sim13.75% ／ 待ちの平均 式0.570日 sim0.598日(±0.008) ／ 待ち8日以上 式1.72% sim1.91%(±0.05) ／ 川止め中に着いたときの待ちの平均 4.16日（平均の長さ3.5日の約1.19倍＝長さ偏りで長い川止めに当たりやすい）。シミュが式より数%長いのは、終わった翌日に次の川止めが始まると1つの長い待ちに数えるため"
+  },
+  "1万通 ≒ 厳密計算": {
+   "ok": true,
+   "detail": "約束どおり 63.70% / 厳密 62.77%（±0.48）・6日以上遅れ 2.85% / 2.91%（±0.17）・遅れの平均 0.824日 / 0.842日（±0.023）"
+  },
+  "速い便の川止めの待ち ≒ 厳密": {
+   "ok": true,
+   "detail": "sim 0.570日 / 厳密 0.569日（±0.022）"
+  },
+  "同じ種で同じ結果": {
+   "ok": true,
+   "detail": "主な数字13個が2回で一致=True"
+  }
+ },
+ "checks_all_ok": true,
+ "seconds": 0.5
+}

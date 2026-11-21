@@ -4003,6 +4003,9 @@ def motion_first_03():
 def _check_long_mod():
     """sims/check-long.py（札の表示時間の点検 short_texts をロングどうしで共用する）"""
     import importlib.util
+    if not (Path(__file__).resolve().parent / "check-long.py").exists():
+        print("  （sims/check-long.py が無いので、札の表示時間の点検だけ飛ばします）")
+        return None
     spec = importlib.util.spec_from_file_location("check_long", Path(__file__).resolve().parent / "check-long.py")
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
@@ -4205,7 +4208,8 @@ def scene_checks(frames=None):
         for v, (s_, t_) in list(extra.items())[:8]:
             print(f"  画面の数字 {v} が data.json の値でない: 「{s_}」 {_ts(t_)}")
         A(f"画面に出る数字は、すべて data.json の値（の四捨五入）か、目もり・日付などの閉じた値: 余分 {len(extra)}個 {list(extra)[:5]}", not extra)
-        short_t = _check_long_mod().short_texts(frames)
+        _cl = _check_long_mod()
+        short_t = _cl.short_texts(frames) if _cl else []
         for a_, b_, s_, need_ in short_t[:12]:
             print(f"  札の表示時間 {_ts(a_)}〜{_ts(b_)} {b_ - a_:.1f}秒／要 {need_:.1f}秒 「{s_[:30]}」")
         A(f"札の表示時間: 画面の文字は「文字数÷8＋1秒」以上出る（字幕・カウンターは除く）: 足りない {len(short_t)} 件", not short_t)
