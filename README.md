@@ -26,6 +26,7 @@ Windows なら `fonts/KleeOne-SemiBold.ttf` をダブルクリックしてイン
 
 | 公開日 | 問い | 動画 | コード |
 |---|---|---|---|
+| 2026-11-22 | 晴れてほしい予定、晴れの特異日を選ぶ？ふつうの日を選ぶ？ | [見る](https://youtube.com/shorts/5vDxxKBpio4) | [`tokubi-hare.py`](sims/tokubi-hare.py) |
 | 2026-11-21 | もしあなたが19世紀の捕鯨船の新米なら、何年で帰れて、いくら稼げる？（新米1万人・1万回。ニューベッドフォード1840〜58年） | [見る](https://youtube.com/shorts/LcFqXtHC_QM) | [`whaling-long.py`](sims/whaling-long.py) |
 | 2026-11-21 | テストで迷った答え、最初のまま？書き換える？ | [見る](https://youtube.com/shorts/sZhff6HPiUI) | [`minaoshi-kakikae.py`](sims/minaoshi-kakikae.py) |
 | 2026-11-20 | サイコロ勝負、3回で止める？6回まで振る？ | [見る](https://youtube.com/shorts/C8yuC8r5oPY) | [`saikoro-tomeru.py`](sims/saikoro-tomeru.py) |
