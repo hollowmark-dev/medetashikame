@@ -26,6 +26,8 @@ Windows なら `fonts/KleeOne-SemiBold.ttf` をダブルクリックしてイン
 
 | 公開日 | 問い | 動画 | コード |
 |---|---|---|---|
+| 2026-11-24 | 扉が3つ。司会者がはずれを1つ開けた。選び直す？そのまま？ | [見る](https://youtube.com/shorts/O132K9Xp244) | [`tobira-erabinaoshi.py`](sims/tobira-erabinaoshi.py) |
+| 2026-11-24 | 南極で生まれるコウテイペンギンのヒナ1万羽。中央値の1羽は何年生きる？ | [見る](https://youtube.com/shorts/diV9M0kLybM) | [`penguin-long.py`](sims/penguin-long.py) |
 | 2026-11-23 | 麻雀の配牌、対子が4つ。七対子を狙う？ふつうの手を狙う？ | [見る](https://youtube.com/shorts/aRXYJnpaC6M) | [`chiitoi-nerau.py`](sims/chiitoi-nerau.py) |
 | 2026-11-22 | 晴れてほしい予定、晴れの特異日を選ぶ？ふつうの日を選ぶ？ | [見る](https://youtube.com/shorts/5vDxxKBpio4) | [`tokubi-hare.py`](sims/tokubi-hare.py) |
 | 2026-11-21 | もしあなたが19世紀の捕鯨船の新米なら、何年で帰れて、いくら稼げる？（新米1万人・1万回。ニューベッドフォード1840〜58年） | [見る](https://youtube.com/shorts/LcFqXtHC_QM) | [`whaling-long.py`](sims/whaling-long.py) |
