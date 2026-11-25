@@ -26,6 +26,7 @@ Windows なら `fonts/KleeOne-SemiBold.ttf` をダブルクリックしてイン
 
 | 公開日 | 問い | 動画 | コード |
 |---|---|---|---|
+| 2026-11-25 | 歌の発表会。16人。出る順番を選べるなら、最初？最後？ | [見る](https://youtube.com/shorts/JdKZxz7PCrg) | [`happyou-junban.py`](sims/happyou-junban.py) |
 | 2026-11-24 | 扉が3つ。司会者がはずれを1つ開けた。選び直す？そのまま？ | [見る](https://youtube.com/shorts/O132K9Xp244) | [`tobira-erabinaoshi.py`](sims/tobira-erabinaoshi.py) |
 | 2026-11-24 | 南極で生まれるコウテイペンギンのヒナ1万羽。中央値の1羽は何年生きる？ | [見る](https://youtube.com/shorts/diV9M0kLybM) | [`penguin-long.py`](sims/penguin-long.py) |
 | 2026-11-23 | 麻雀の配牌、対子が4つ。七対子を狙う？ふつうの手を狙う？ | [見る](https://youtube.com/shorts/aRXYJnpaC6M) | [`chiitoi-nerau.py`](sims/chiitoi-nerau.py) |
