@@ -797,9 +797,8 @@ def small(src, dst=None, max_mb=30.0, crf=28, audio_k=96):
     dst = Path(dst) if dst else src.with_name(src.stem + ".small.mp4")
     c = crf
     while True:
-        cmd = ["ffmpeg", "-y", "-loglevel", "error", "-i", str(src), "-vf", "scale=1280:-2", "-c:v", "libx264",
-               "-crf", str(c), "-preset", "veryfast", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", f"{audio_k}k",
-               "-movflags", "+faststart", str(dst)]
+        cmd = ["ffmpeg", "-y", "-loglevel", "error", "-i", str(src), "-vf", "scale=1280:-2", *(lf.video_codec_args(c, fast=True) if hasattr(lf, "video_codec_args") else ["-c:v", "libx264", "-crf", str(c), "-preset", "veryfast", "-pix_fmt", "yuv420p"]),
+               "-c:a", "aac", "-b:a", f"{audio_k}k", "-movflags", "+faststart", str(dst)]   # SIM_ENCODER=nvenc で h264_nvenc
         subprocess.run(cmd, check=True)
         mb = dst.stat().st_size / 1024 / 1024
         if mb <= max_mb or c >= 36:
