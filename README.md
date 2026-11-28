@@ -26,6 +26,7 @@ Windows なら `fonts/KleeOne-SemiBold.ttf` をダブルクリックしてイン
 
 | 公開日 | 問い | 動画 | コード |
 |---|---|---|---|
+| 2026-11-28 |  | [見る](https://youtube.com/shorts/CDhwpc3IXV4) | [`cheetah-hitoridachi.py`](sims/cheetah-hitoridachi.py) |
 | 2026-11-27 | ウミガメの卵、1万個。大人になって浜に戻るのは何匹？ | [見る](https://youtube.com/shorts/XeLPJ0ms96E) | [`umigame-tamago.py`](sims/umigame-tamago.py) |
 | 2026-11-26 | ゾウアザラシのメスの赤ちゃん。一生で、子を10頭以上産むのは何頭に1頭？ | [見る](https://youtube.com/shorts/eYd1Klj7YGA) | [`zouazarashi-mama.py`](sims/zouazarashi-mama.py) |
 | 2026-11-26 | あなたは一生で何回、初日の出を見られる？ | [見る](https://youtube.com/shorts/8HNUCktb5tg) | [`hatsuhinode-long.py`](sims/hatsuhinode-long.py) |
